@@ -35,7 +35,7 @@ const  Home = (props) => {
             },
             {
                 header: 'University and course selection',
-                info : "Counselling is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries",
+                info : "Although the ranking mechanism varies and differs as per the ranking institution, it does provide an insight into the quality of the Institution.We at Global Dart make sure that we apply to only recognized and well accredited institutions.We ask the students if they have a specific location choice in the chosen country and try to select universities in the vicinity of the given location.",
                 card: false,
                 link: false,
                 image: require('./../assets/GDillus/2.png'),
@@ -44,7 +44,7 @@ const  Home = (props) => {
             },
             {
                 header: 'Admissions',
-                info : "Counselling is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries",
+                info : "These are critical. We provide exact deadlines for Spring/Summer/Fall intakes. Some Universities have multiple deadlines i.e. Scholarship/Priority deadline and documents deadline. It’s important to follow the deadlines strictly as students tend to miss out on an entire year because of it.",
                 // card: true,
                 right: true,
                 link: true,
@@ -55,7 +55,7 @@ const  Home = (props) => {
             },
             {
                 header: 'VISA Processing',
-                info : "Counselling is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries",
+                info : "Post confirmation of an admission, the student has to apply for Study Visa/ Permit to the respective embassies.We assist students in filing the Visa applications as per the country’s procedure. Some of them may have online forms while others have paper based forms",
                 card: false,
                 link: true,
                 image: require('./../assets/GDillus/4.png'),
@@ -66,7 +66,7 @@ const  Home = (props) => {
             },
             {
                 header: 'Travel Briefing',
-                info : "Counselling is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries",
+                info : "We assist all students with their travel and relocation for the course to the new country thereby ensuring a worry free transition. Moving to a new country, be it for study or settling, is no trivial task. We understand the stress and pressure that comes along with this. Excitement at times eventually gives way to anxieties as one gets to hear various experiences had in the country.",
                 // card: true,
                 left: true,
                 link: false,
@@ -77,7 +77,7 @@ const  Home = (props) => {
             },
             {
                 header: 'Post VISA Services',
-                info : "Counselling is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries",
+                info : "We view this as a transitional phase and hence offer a complete and thorough travel and relocation service, leaving no stone unturned to ensure a smooth transition. Our travel and relocation expertise enable you to literally relax while we handle it all. Leo Global will assist all students in getting the best rates for Air Tickets and foreign exchange. We also helps students with the FOREX cards and travel Insurance which are really useful during the initial stages",
                 card: false,
                 link: false,
                 image: require('./../assets/GDillus/6.png'),
@@ -86,7 +86,7 @@ const  Home = (props) => {
             },
             {
                 header: 'Pre and Post Travel Assistance',
-                info : "Counselling is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries",
+                info : "Knowing the right things to carry is essential. Many students carry things which are irrelevant which increases the baggage load. There are certain things which are useful in India that would be completely useless there. The dress code at institutions is very informal so we need to prepare accordingly.",
                 // card: true,
                 right: true,
                 link: false,
@@ -97,7 +97,7 @@ const  Home = (props) => {
             },
             {
                 header: 'Career Assistance',
-                info : "Counselling is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries",
+                info : "This is something that is mostly overlooked as a practice in other service providers. We at Global Dart however recognize the importance of mentally preparing a candidate with the right expectations so that the transition is as easy as possible.",
                 card: false,
                 link: false,
                 image: require('./../assets/GDillus/8.png'),
@@ -110,35 +110,35 @@ const  Home = (props) => {
         const benifits = [
             {
                 title:'Free Counselling',
-                subtitle: 'We offer free counselling to all our students',
+                subtitle: 'Counselling on Value of Degree, Quality of education and Costs',
                 icon : require('./../assets/benfitsicons/meeting.png')
             },
             {
                 title:'Admission letter in a week',
-                subtitle: 'We offer free counselling to all our students',
+                subtitle: 'Receive Admission letter in just 7 working days',
                 icon : require('./../assets/benfitsicons/document.png')
 
             },
             {
                 title:'Save VISA Charges',
-                subtitle: 'We offer free counselling to all our students',
+                subtitle: "Specific breakdown of students VISA charges and their sponsors",
                 icon : require('./../assets/benfitsicons/savings.png')
 
             },
             {
                 title:'Free SIM and Forex cards',
-                subtitle: 'We offer free counselling to all our students',
+                subtitle: 'We also help students with the FOREX cards and travel Insurance',
                 icon : require('./../assets/benfitsicons/sim-card.png')
             },
             {
                 title:'Internship Assured',
-                subtitle: 'We offer free counselling to all our students',
+                subtitle: 'Internships give the students real time work experience in a foreign country',
                 icon : require('./../assets/benfitsicons/job.png')
 
             },
             {
                 title:'24/7 Assistance',
-                subtitle: 'We offer free counselling to all our students',
+                subtitle: 'We are available round the clock to support students',
                 icon : require('./../assets/benfitsicons/helpline.png')
 
             }
@@ -146,44 +146,29 @@ const  Home = (props) => {
 
         const pastEvents = [
             {
-                date: '20 NOV 2018',
+                date: '20 Jan 2021',
                 eventName: 'Latest trends in tech in 2021',
                 time: '9:30 AM - 3:00 PM',
                 location: 'Bangalore'
             },
-            {
-                eventName: 'London university Course Discussion',
-                time:'9:30 AM - 3:00 PM',
-                location: 'Bangalore'
-            },
-            {
-                eventName: 'Economics guidance',
-                time:'9:30 AM - 3:00 PM',
-                location: 'Bangalore'
-            },
-
         ]
 
         const upcomingEvents = [
             {
-                date: '12 Jan 2018',
+                date: '25 Feb 2021',
                 webinar: true,
                 eventName: 'Universities Introduction meetup',
                 time: '9:30 AM - 3:00 PM'
             },
             {
-                webinar: true,
-                eventName: 'Course Discussion',
-                time: '9:30 AM - 3:00 PM'
-            },
-            {
-                date: '15 Jan 2018',
+                date: '1 Mar 2021',
                 seminar: true,
                 eventName: 'Application and Travel Planning',
                 time: '9:30 AM - 3:00 PM',
                 location: 'Bangalore',
             },
             {
+                date: '15 Mar 2021',
                 seminar: true,
                 eventName: 'Course Discussion',
                 time: '9:30 AM - 3:00 PM',
@@ -231,7 +216,7 @@ const  Home = (props) => {
                         <div className="background-image" style={{ backgroundImage:`url(${home})`}} alt="home"></div>
                         <div className="image-height">
                             <p><span style={{ fontFamily: 'Helvetica'}} className="font-34 text-white">Aiming</span><p><span style={{ fontFamily: 'helvetica-light' }} className="description font-88 text-white">Global <span style = {{ fontFamily: 'Helvetica-Bold' }} className="font-88 text-white">Education</span></span></p></p> 
-                            <p style={{ margin:'30px 0px', maxWidth:'80%'}} className="font-16 text-white">Higher education has never been this easier. In this ever challenging world, education at the Global level is the key for a successful career. GlobalDart guides the aspiring students around the globe to access the latest courses from top institutions in the world. GlobalDart handles ways and means for you to aim for a better career and life.</p>
+                            <p style={{ margin:'30px 0px', maxWidth:'66%'}} className="font-16 text-white">Higher education has never been this easier. In this ever challenging world, education at the Global level is the key for a successful career. GlobalDart guides the aspiring students around the globe to access the latest courses from top institutions in the world. GlobalDart handles ways and means for you to aim for a better career and life.</p>
                                     <Button style={{ color: '#ffff', fontSize:'18px',width:'250px',height:'44px',fontFamily:'fontSemiBold',backgroundColor:'#c8102e',textTransform:'capitalize',boxShadow:'unset' }} variant="contained">Know how</Button>
                         </div>
                     </div>
@@ -241,7 +226,7 @@ const  Home = (props) => {
             <div className="blue-light-bg">
             <div className="page_2 main" style={{ padding:'70px 0px'}}>
                 <div style = {{ maxWidth:'800px' }}>
-                    <p className="padding-b-50 page-header">Forget about the tedious process for joining top institutions in the world, we've got your back!  <p style = {{ padding:'10px 0px'}} className="semi-bold padding">GlobalDart takes you through a quick 8-step framework to join your desired institution. <br/>Let's see How</p></p>
+                    <p className="padding-b-50 sub-page-header" >Forget about the tedious process for joining top institutions in the world, we've got your back!  <p style = {{ padding:'10px 0px'}} className="semi-bold padding">GlobalDart takes you through a quick 8-step framework to join your desired institution. <br/>Let's see How</p></p>
                 </div>
                 {
                     _.map(steps,step => <div className="card-row">
@@ -287,7 +272,7 @@ const  Home = (props) => {
             <div className="main flex-column">
             <div style={{ alignItems:'center',justifyContent:'space-around'}} className="flex-fluid">
                 <p className="page-header"> <span className = "bold"> Events </span> for Students</p>
-                <p style={{maxWidth:'500px'}} className="font-12 space-btwn gray-text">Counselling is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries</p>
+                <p style={{maxWidth:'500px'}} className="font-12 space-btwn gray-text">Our university partners visit our offices in India regularly. They do so to speak and meet with students like you in person.Three times a year we plan events in colleges and campuses near our offices.We give presentations and we have an information booth for you to ask us questions in an informal setting</p>
             </div>
             <div className="flex-fluid space-even margin-top-40">
                 <div>

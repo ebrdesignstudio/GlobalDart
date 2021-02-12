@@ -14,7 +14,6 @@ function App() {
       <Router>
         <Nav
             Logo={Logo}
-            Label={() => null}
 
                 titles={[
                 {name: 'Home',link:'/'},
