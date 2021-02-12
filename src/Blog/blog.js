@@ -11,8 +11,7 @@ const Blog = () => {
             label: 'Emerging tech',
             date: '23 JAN 2018',
             icon: require('./../assets/educationimage/education.jpg'),
-            text: 'Here is our trending technologies based on every year from the past 10 years from basic to high end profession Here is our trending technologies based on every year from the past 10 years from basic to high end profession Here is our trending technologies based on every year from the past 10 years from basic to high end profession ',
-            
+            text: 'Here is our trending technologies based on every year from the past 10 years from basic to high end profession Here is our trending technologies based on every year from the past 10 years from basic to high end profession Here is our trending technologies based on every year from the past 10 years from basic to high end profession ',    
         },
         {
             label: 'First ever automated flight',
@@ -65,7 +64,6 @@ const Blog = () => {
                             </div>    
                         )
                     }
-    
                 </div>
            </div>
         </div>

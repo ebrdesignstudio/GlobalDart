@@ -1,5 +1,4 @@
 import React from 'react';
-import Navs from '../Home/navs';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -28,9 +27,9 @@ const  Faq = () => {
     ]
     return (
         <div className="faq">
-            <Navs />
+            {/* <Nav /> */}
             <div className="main">
-            <p className="page-header font-44">Got <span className="semi-bold">questions ?</span></p>
+            <p className="page-header font-44">Few common <span className="semi-bold">questions ?</span></p>
             <div className="margin-top-40">
             {
                 _.map(faqs,faq =>

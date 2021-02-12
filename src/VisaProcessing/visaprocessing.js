@@ -51,7 +51,6 @@ const  Admission = () => {
                                     
                                 )
                             }
-                            <p className="flex-vc">Proceed to <span className="red">VISA Processing<ChevronRightIcon/></span></p>
                         </div>
                     </div>
                         <div className="services-info">

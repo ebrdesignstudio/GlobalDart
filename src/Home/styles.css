@@ -174,35 +174,7 @@
     margin: unset;
     padding: 50px;
 }
-@font-face {
-        font-family: "fontMedium";
-        src: url('../assets/fonts/Cabin-Regular-TTF.ttf');
-    }
 
-@font-face {
-    font-family: "fontSemiBold";
-    src: url('../assets/fonts/Cabin-SemiBold-TTF.ttf');
-}
-@font-face {
-    font-family: "fontCabinItalic";
-    src: url('../assets/fonts/Cabin-Italic-TTF.ttf');
-}
-@font-face {
-    font-family: "Helvetica-Bold";
-    src: url('../assets/fonts/Helvetica-Bold.ttf')
-}
-@font-face {
-    font-family: "Helvetica";
-    src: url('../assets/fonts/Helvetica.ttf');
-}
-@font-face {
-    font-family: "helvetica-light";
-    src: url('../assets/fonts/helvetica-light.ttf');
-}
-@font-face {
-    font-family: "Cabin-Bold";
-    src: url('../assets/fonts/Cabin-Bold-TTF.ttf');
-}
 
 .grid-container {
     display: flex;
@@ -253,9 +225,25 @@
 }
 
 
-.contact_container {
-    background-color: #fafafa;
+.contact_container * {
+    color: #012169 !important;
+    
 }
+
+.contact_container{
+    background: #fafafa;
+    box-shadow:none;
+    margin:0px;
+    padding:0px;
+    color: #012169;
+}
+.contact_container .MuiInput-underline:before {
+    border-color:unset !important;
+}
+.contact_container button {
+    background-color: rgb(200, 16, 46)!important;
+}
+
 .blue-light-bg {
     background-color: #E7E7FE;
 }

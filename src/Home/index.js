@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Nav from './navs';
+
 import Card from '@material-ui/core/Card';
 import _ from 'lodash';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
@@ -17,12 +17,6 @@ import IconButton from '@material-ui/core/IconButton';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import home from './../assets/homeimage/home.jpg';
-
-
-
-
-
-
 
 
 
@@ -223,7 +217,7 @@ const  Home = (props) => {
                     <div className="numbers" style={{ backgroundImage: `url(${props.step.numberImage.default})`, padding:'5px 0px' }} alt = "image" />
                     <p className="header black">{props.step.header}</p> 
                     <p className="info font-14">{props.step.info}</p>
-                    {props.step.link && <><IconButton onClick={props.step.redirect} style={{ padding:0}}><span className="font-14 red semi-bold">Know more</span><ArrowForwardIcon style={{ color:'#c8102e', fontSize: 30, paddingLeft: 3}}/></IconButton></>}
+                    {props.step.link && <><IconButton onClick={props.step.redirect} style={{ padding:0}}><span className="font-14 red semi-bold">Know More</span><ArrowForwardIcon style={{ color:'#c8102e', fontSize: 30, paddingLeft: 3}}/></IconButton></>}
                 </div>
                 <div className="illustration" style = {{ height: '310px', width: '100%'}}><div className="illustrations" style={{ backgroundImage: `url(${props.step.image.default})`, ...props.step.styles }} alt = "image" /></div> 
             </div>
@@ -232,14 +226,13 @@ const  Home = (props) => {
     return (
         <div>
             <div className="page_1">
-                <Nav />
                 <div className="home-align main flex-fluid">
                     <div style= {{ backgroundColor: 'fafafa'}}>
                         <div className="background-image" style={{ backgroundImage:`url(${home})`}} alt="home"></div>
                         <div className="image-height">
-                            <p><span style={{ fontFamily: 'Helvetica'}} className="font-34 text-white">Key to</span><p><span style={{ fontFamily: 'helvetica-light' }} className="description font-88 text-white">Global <span style = {{ fontFamily: 'Helvetica-Bold' }} className="font-88 text-white">Education</span></span></p></p> 
-                            <p style={{ margin:'30px 0px',}} className="font-14 text-white">All you need to worry about choosing the best university for your higher <span style = {{ display: 'block'}}>education and start your academics</span></p>
-                                    <Button style={{ color: '#ffff', fontSize:'18px',width:'250px',height:'44px',fontFamily:'fontSemiBold',backgroundColor:'#c8102e',textTransform:'capitalize',boxShadow:'unset' }} variant="contained">Know more</Button>
+                            <p><span style={{ fontFamily: 'Helvetica'}} className="font-34 text-white">Aiming</span><p><span style={{ fontFamily: 'helvetica-light' }} className="description font-88 text-white">Global <span style = {{ fontFamily: 'Helvetica-Bold' }} className="font-88 text-white">Education</span></span></p></p> 
+                            <p style={{ margin:'30px 0px', maxWidth:'80%'}} className="font-16 text-white">Higher education has never been this easier. In this ever challenging world, education at the Global level is the key for a successful career. GlobalDart guides the aspiring students around the globe to access the latest courses from top institutions in the world. GlobalDart handles ways and means for you to aim for a better career and life.</p>
+                                    <Button style={{ color: '#ffff', fontSize:'18px',width:'250px',height:'44px',fontFamily:'fontSemiBold',backgroundColor:'#c8102e',textTransform:'capitalize',boxShadow:'unset' }} variant="contained">Know how</Button>
                         </div>
                     </div>
                 </div>
@@ -247,8 +240,8 @@ const  Home = (props) => {
             <section id="admissions">
             <div className="blue-light-bg">
             <div className="page_2 main" style={{ padding:'70px 0px'}}>
-                <div style = {{ maxWidth:'550px' }}>
-                    <p className="padding-b-50 page-header">Assistance at every step till you reach your <p className="semi-bold">university</p></p>
+                <div style = {{ maxWidth:'800px' }}>
+                    <p className="padding-b-50 page-header">Forget about the tedious process for joining top institutions in the world, we've got your back!  <p style = {{ padding:'10px 0px'}} className="semi-bold padding">GlobalDart takes you through a quick 8-step framework to join your desired institution. <br/>Let's see How</p></p>
                 </div>
                 {
                     _.map(steps,step => <div className="card-row">
@@ -273,7 +266,7 @@ const  Home = (props) => {
             </section>
             <div className="blue-gradient">
                 <div className="main flex-column">
-                        <p className="page-title padding-b-30 left text-white bold font-44">Why <span>Choose</span> us ?</p>
+                        <p className="page-title padding-b-30 left text-white bold font-44">Benefits</p>
                     <div className="grid-container">
                             {
                                 _.map(benifits,benifit =><div className="benefit">

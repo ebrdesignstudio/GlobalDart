@@ -1,3 +1,35 @@
+/* body *{
+    font-family: "fontMedium";
+} */
+@font-face {
+    font-family: "fontMedium";
+    src: url('../assets/fonts/Cabin-Regular-TTF.ttf');
+}
+
+@font-face {
+    font-family: "fontSemiBold";
+    src: url('../assets/fonts/Cabin-SemiBold-TTF.ttf');
+}
+@font-face {
+    font-family: "fontCabinItalic";
+    src: url('../assets/fonts/Cabin-Italic-TTF.ttf');
+}
+@font-face {
+    font-family: "Helvetica-Bold";
+    src: url('../assets/fonts/Helvetica-Bold.ttf')
+}
+@font-face {
+    font-family: "Helvetica";
+    src: url('../assets/fonts/Helvetica.ttf');
+}
+@font-face {
+    font-family: "helvetica-light";
+    src: url('../assets/fonts/helvetica-light.ttf');
+}
+@font-face {
+    font-family: "Cabin-Bold";
+    src: url('../assets/fonts/Cabin-Bold-TTF.ttf');
+}
 p{
     margin: 0px;
     opacity: 0.9;
@@ -63,9 +95,9 @@ p{
 
 /* page header */
 .page-header {
-    font-size: 44px;
-    line-height:53px;
-    letter-spacing:1.8px;
+    font-size: 34px;
+    line-height:42px;
+    letter-spacing:1px;
     font-weight:200;
 }
 
