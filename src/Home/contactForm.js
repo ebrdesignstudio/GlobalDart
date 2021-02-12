@@ -1,0 +1,80 @@
+import React, { Component } from 'react';
+import TextField from '@material-ui/core/TextField';
+import  { InputLabel, Button } from '@material-ui/core';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import { Checkbox } from '@material-ui/core';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+
+
+
+
+class ContactForm extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            name : '',
+            contactNumber : '',
+            message : '',
+
+        }
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+    }
+    
+    render() {
+        return (
+            <div style = {{ maxWidth: '80%',margin: '0px auto' }} className="contact_form">
+                <form className="form flex-column" onSubmit={this.handleSubmit} style={{ flex: 1}}>
+                    <TextField 
+                        name = "name"
+                        fullWidth
+                        label = "Name"
+                        id = "name"
+                        type = "text"
+                        value = {this.state.name}
+                        style={{ flex: '0 0 15%'}}
+                        onChange = { (e) => this.setState({name:e.target.value})}
+                    />
+                    <TextField 
+                        name = "contact number"
+                        label = "Contact Number"
+                        id = "contact number"
+                        type = "tel"
+                        value = {this.state.contactNumber}
+                        onChange = { (e) => this.setState({contactNumber:e.target.value})}
+                    />
+                    <TextField 
+                        name = "message"
+                        label = "Message"
+                        id = "message"
+                        type = "text"
+                        value = {this.state.message}
+                        onChange = { (e) => this.setState({message:e.target.value})}
+                    />
+                    <FormControl>
+                        <InputLabel>Required</InputLabel>
+                        <Select
+                            id = "required"
+                            value = "Required"
+                            fullWidth
+                        >
+                        <MenuItem value = "">
+                        </MenuItem>
+                        <MenuItem>Required</MenuItem>
+                        <MenuItem>Courses</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <FormControlLabel control = {<Checkbox name = "terms and conditions"/>}label="I agree to terms and conditions"/>
+                    <Button type = "submit" color = "secondary">Send</Button>
+                </form>
+            </div>
+        )
+    }
+}
+
+export default ContactForm;

@@ -1,0 +1,291 @@
+p{
+    margin: 0px;
+    opacity: 0.9;
+}
+
+/* font capitals */
+
+.capitals{
+    text-transform: capitalize;
+}
+
+/* font size */
+.font-20{
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.8px;
+   
+}
+
+.font-12{
+    font-size: 12px;
+    line-height: 19.2px;
+    
+}
+.font-40{
+    font-size: 40px;
+    line-height: 64px;
+}
+.font-14{
+    font-size: 14px;
+    line-height: 22.4px;
+    letter-spacing: 0.27px;
+   
+}
+.font-44{
+    font-size: 44px;
+    line-height: 70.4px;
+    letter-spacing: 2.45px;
+}
+.font-34{
+    font-size: 34px;
+    line-height:41px;
+    letter-spacing: 0.64px;
+}
+.font-88 {
+    font-size: 88px;
+    line-height: 100px;
+}
+.font-16{
+    font-size: 16px;
+    line-height: 22.6px;
+    letter-spacing: 0.27px;  
+}
+.font-30 {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0.8px;
+}
+.caption {
+    max-width: 630px;
+    text-align: center;
+}
+
+/* page header */
+.page-header {
+    font-size: 44px;
+    line-height:53px;
+    letter-spacing:1.8px;
+    font-weight:200;
+}
+
+
+
+/* font alignment */
+
+.left {
+    text-align: left;
+}
+.center {
+    text-align: center;
+}
+
+/* no wrap */
+.no-wrap {
+    white-space: nowrap;
+}
+
+
+
+/* font weight classes */
+.semi-bold{
+    font-weight: 400;
+}
+.bold{ 
+    font-weight: 600;
+
+}
+
+/* flex classes */
+
+.flex{
+    display: flex;
+}
+
+.flex-fluid {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.space-even {
+    justify-content: space-evenly;
+}
+.space-btwn {
+    justify-content: space-between;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}
+.flex-vc {
+    display: flex;
+    align-items: center;
+}
+.flex-hz {
+    display: flex;
+    justify-content: center;
+}
+
+/* color classes */
+
+.white{
+    color: #E7E7FE;
+}
+.text-white{
+    color: white;
+}
+
+.main-blue {
+    color:  #012169;
+}
+
+.black {
+    color: #212121;
+}
+.red {
+    color: #c8102e;
+}
+.light-gray {
+    color: #808080;
+}
+.light-red {
+    background-color: #f4cbcb;
+}
+.black-text{ 
+    color: #333;
+}
+.blue-background {
+    background-color: rgb(1, 33, 105);
+}
+.gray-text {
+    color: #6c6c6c;
+}
+
+
+/* line height for p tags */
+.line-height {
+    line-height: 25.6px;
+    
+}
+
+/* margin top and margin bottom for events in p tag */
+.margin-top {
+    margin-top: 10px;
+}
+.margin-bottom {
+    margin-bottom: 10px;
+}
+.margin-t-b-20{
+    margin: 20px 0px;
+}
+.margin-t-b-60 {
+    margin: 60px 0px;
+}
+.padding-l-r-20{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.margin-top-20 {
+    margin-top: 20px;
+}
+.padding-b-50 {
+    padding-bottom: 50px;
+}
+
+.margin-t-r-b-l {
+    margin: 10px 0px 10px 0px;
+}
+.padding-b-30 {
+    padding-bottom: 30px;
+}
+.padding-t-b-5 {
+    padding: 5px 0px;
+}
+.padding-t-b-10 {
+    padding: 10px 0px;
+}
+.padding-l-r-10{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.margin-top-40 {
+    margin-top: 40px;
+}
+.margin-b-20 {
+    margin-bottom: 20px;
+}
+
+/* icon styles */
+.icon-padding{
+    padding-right: 10px ;
+}
+
+
+/* width for margin in admissions */
+.align-width {
+    width: 500px;
+}
+
+
+/* font weights  */
+
+.bold {
+    font-weight: 600;
+}
+.semi-bold {
+    font-weight: 400;
+}
+
+/* button color */
+.button-color{
+    background-color: #c8102e;
+}
+
+/* footer font-20 */
+.footer-font-28{
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 1.68px;
+    color: #fff;
+}
+
+/* icons size */
+.icon-size{
+    width: 42px;
+    height: 42px;
+    opacity: 0.9;
+}
+
+
+
+@media all and (min-width:320px) and (max-width: 480px){
+    .font-88 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .font-34 {
+        font-size: 24px;
+        line-height: 34px;
+        letter-spacing: 0.64px;
+    }
+    .font-44 {
+        font-size: 34px;
+        line-height: 60px;
+        letter-spacing: 1.64px;
+    }
+    .page-header {
+        font-size: 34px;
+        line-height: 40px;
+        letter-spacing: 1px;
+        font-weight: 200
+    }
+    .font-12 {
+        padding: 10px 0px;
+    }
+
+
+}

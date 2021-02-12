@@ -1,0 +1,443 @@
+
+.main{
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 0px;
+}
+.main-success {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 0px;
+    padding-bottom: 0px;
+}
+.accent-bg {
+    background-color: #E7E7FE;
+    margin: auto 0px;
+    width: auto;
+}
+.image-height {
+    min-height: 100vh;
+    margin-top: 100px;
+}
+.abs-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.description {
+    font-weight: lighter;
+    font-size: 80px;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+.align {
+    font-weight: bold;
+    font-size: 80px;
+    color: #212121;
+}
+.home-align {
+    height: calc(100vh - 200px);
+}
+.small {
+   
+    font-size: 34px;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: lighter;
+}
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+.header {
+    font-size: 34px;
+    line-height: 39px;
+    font-weight: 600;
+    color: #212121;
+    text-align: left;
+    letter-spacing: 0.87px;
+}
+
+.flex-center {
+    text-align: center;
+    display: flex !important;
+    flex-direction: row;
+}
+.info {
+    color: #6c6c6c;
+    margin: 2px;
+    padding: 10px 0px;
+    text-align: left;   
+}
+.step {
+    max-width: 80%;
+}
+.card-align-right {
+    margin: 100px;
+}
+.even-process {
+    margin-left: 170px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card-align {
+    margin: 30px auto;
+}
+.card-row:nth-child(odd) .step{
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+.card-row:nth-child(4n+1) .card-align{
+    margin-left: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;     
+}
+.card-row:nth-child(4n - 1) .card-align{
+    margin-right: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;     
+}
+
+.number {
+    top: 30px;
+}
+.card-row {
+    position: relative;
+}
+.card-align-right {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.illustrations {
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.numbers {
+    width: 24px;
+    opacity: 0.9;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-position: center top !important;
+}
+.page-title{
+    letter-spacing: 2.4px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 44px;
+}
+.primary-button{
+    width:250px;
+    height:44px;
+    font-family: 'fontSemiBold'; 
+    background-color: #c8102e;
+    text-transform: capitalize;
+    box-shadow: unset;
+}
+.benefit {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    min-width: 366px;
+    margin: 30px 0px;
+}
+.maps {
+    width: 60%;
+    min-height: 100%;
+    position: relative; 
+}
+.main-blue-maps {
+    position : absolute;
+    font-size: 44px;
+    top: 5%;
+    left: 50%;
+    font-weight: bold;
+    background-color: #fafafad4;
+}
+.right {
+    background-color:#E7E7FE;
+    margin: unset;
+    padding: 50px;
+}
+@font-face {
+        font-family: "fontMedium";
+        src: url('../assets/fonts/Cabin-Regular-TTF.ttf');
+    }
+
+@font-face {
+    font-family: "fontSemiBold";
+    src: url('../assets/fonts/Cabin-SemiBold-TTF.ttf');
+}
+@font-face {
+    font-family: "fontCabinItalic";
+    src: url('../assets/fonts/Cabin-Italic-TTF.ttf');
+}
+@font-face {
+    font-family: "Helvetica-Bold";
+    src: url('../assets/fonts/Helvetica-Bold.ttf')
+}
+@font-face {
+    font-family: "Helvetica";
+    src: url('../assets/fonts/Helvetica.ttf');
+}
+@font-face {
+    font-family: "helvetica-light";
+    src: url('../assets/fonts/helvetica-light.ttf');
+}
+@font-face {
+    font-family: "Cabin-Bold";
+    src: url('../assets/fonts/Cabin-Bold-TTF.ttf');
+}
+
+.grid-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #ffff;
+
+}
+.maps-iframe {
+    min-height: unset;
+}
+
+.icon {
+    opacity: 80%;
+    width: 48px;
+    height: 48px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 38.4px;
+    max-width: 350px;
+    padding-top: 8px;
+}
+.infos {
+    padding-top: 3px;
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 180px;
+    text-align: center;
+}
+.events {
+    background-color: #fafafa;
+}
+.quote-icon-left {
+    width: 64px;
+    height: 64px;
+    transform: rotate(183deg);
+    opacity: 60%;
+    padding-top: 10px;
+}
+.quote-icon-right {
+    width: 64px;
+    height: 64px;
+    margin: 10px 675px;
+    opacity: 60%;
+}
+
+
+.contact_container {
+    background-color: #fafafa;
+}
+.blue-light-bg {
+    background-color: #E7E7FE;
+}
+
+.blue-gradient {
+  background: #1e3c72; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1e3c72, #2a5298); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+.background-image {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-size: cover;
+}
+.social-links {
+    margin-top: 50px;
+}
+
+.carousel-container{
+    width: 800px; 
+    margin: 50px auto;
+}
+
+.services-info{
+    width: 50%;
+    transform: translateY(-200%);
+}
+
+
+
+
+@media all and (min-width:471px) and (max-width: 1025px){
+    .nav{
+        padding: 15px;
+    }
+    html,body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .padding-b-50.page-header{
+        margin: 10px 5px 10px 20px;
+    }
+    .steps {
+        margin: 10px 0px 0px 15px;
+    }
+    .page-title.padding-b-30.left.text-white.bold.font-44{
+        text-align: center;
+    }
+    .grid-container {
+        display: initial;
+    }
+    .flex {
+        display: block!important;
+        margin: 10px 0px 0px 15px;
+    }
+    .contact_form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start!important;
+        margin-top: 20px
+    }
+    .main-blue{ 
+        font-size: 18px!important;
+    }
+    .mobile-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .flex-column {
+        align-items: center;
+    }
+    .icons-center{
+        text-align: center;
+    }
+    .left {
+        margin-left: 30px;
+    }
+    .font-20.gray-text.margin-t-r-b-l{
+        margin: 0px;
+    }
+    .mobile-blog {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .footer-navs {
+        min-width: 400px;
+    }
+    
+
+}
+
+
+
+@media only screen and (max-width: 471px) {
+    html,body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .flex-fluid {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .flex-fluid.reverse {
+        flex-direction: column-reverse;
+    }
+}
+
+
+@media all and (min-width:320px) and (max-width: 480px){
+    .footer-navs{
+        min-width: 100%;
+    }
+    .benefit {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;
+        min-width: 100%;
+    }
+    .main{
+        max-width: 80%;
+        margin: auto;
+        padding: 100px 0px;
+    }
+    .background-image {
+        background-position: center;
+    }
+    .title {
+        text-align: center;
+    }
+    .maps {
+        width: 100%;
+        min-height: 60vh;
+        position: relative; 
+    }
+    .main-blue-maps{
+        font-size: 30px;
+    }
+    
+    .maps-iframe{
+        min-height: 60vh;
+    }
+    
+    .icons-center {
+        text-align: center;
+    }
+    .quick-links {
+        padding: 10px 0px;
+        margin-top: 30px;
+    }
+    .social-links {
+        margin-top: 20px;
+    }
+    .carousel-container{
+        margin: 0px auto;
+        width: 100%;
+    }
+    .main-success{
+        max-width: 1100px;
+        margin: auto;
+        padding: 100px 0px;
+    }
+    .services-info{
+        width: unset;
+        transform: none;
+    }
+    .right {
+        background-color:#E7E7FE;
+        padding: 20px;
+    }
+}
+
+
+@media all and (min-width:480px) and (max-width:768px){
+
+}
