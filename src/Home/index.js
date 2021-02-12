@@ -26,7 +26,7 @@ const  Home = (props) => {
     const steps = [
             {
                 header: 'Counselling',
-                info : "Counselling is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries",
+                info : "Students have various career options to choose specially after under graduation. Global Dart provides you with the right direction when it comes to decision making by giving you detailed information on your options…",
                 card: false,
                 link: false,
                 image: require('../assets/GDillus/1.png'),
