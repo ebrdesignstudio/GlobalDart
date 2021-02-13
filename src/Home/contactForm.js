@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
-import  { InputLabel, Button } from '@material-ui/core';
+import { InputLabel, Button } from '@material-ui/core';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -13,68 +13,68 @@ import sendMessage from '../Web-bricks/lib/messenger'
 class ContactForm extends Component {
     constructor(props) {
         super(props)
-    
+
         this.state = {
-            name : '',
-            contactNumber : '',
-            message : '',
+            name: '',
+            contactNumber: '',
+            message: '',
             key: 0
         }
     }
 
     handleSubmit = async (values) => {
-        try{
+        try {
             await sendMessage(values);
         }
-        catch(e){
+        catch (e) {
         }
         values.onSuccess()
         this.setState({
-            key : this.state.key + 1
+            key: this.state.key + 1
         })
     }
-    
+
     render() {
         return (
-            <div key={this.state.key} style = {{ maxWidth: '80%',margin: '0px auto' }} className="contact_form">
-            <Form
-                title="Send us a message"
-                submitButton={{
-                    label: 'Send now'
-                }}
-                onSubmit={this.handleSubmit}
-                formMaker={{
-                    list: [{
-                        type: 'textField',
-                        props: {
-                            name: "name",
-                            fullWidth: true,
-                            label: "Name",
-                            required: true,
-                        }
-                    }, {
-                        type: 'textField',
-                        props: {
-                            name: "phone",
-                            fullWidth: true,
-                            required: true,
-                            label: "Phone Number",
-                        }
-                    }, {
-                        type: 'textField',
-                        props: {
-                            name: "message",
-                            fullWidth: true,
-                            required: true,
-                            label: "Message",
-                            multiline: true,
-                            rows: 4
-                        }
-                    }]
-                }}
+            <div key={this.state.key} style={{ maxWidth: '80%', margin: '0px auto' }} className="contact_form">
+                <Form
+                    title="Send us a message"
+                    submitButton={{
+                        label: 'Send now'
+                    }}
+                    onSubmit={this.handleSubmit}
+                    formMaker={{
+                        list: [{
+                            type: 'textField',
+                            props: {
+                                name: "name",
+                                fullWidth: true,
+                                label: "Name",
+                                required: true,
+                            }
+                        }, {
+                            type: 'textField',
+                            props: {
+                                name: "phone",
+                                fullWidth: true,
+                                required: true,
+                                label: "Phone Number",
+                            }
+                        }, {
+                            type: 'textField',
+                            props: {
+                                name: "message",
+                                fullWidth: true,
+                                required: true,
+                                label: "Message",
+                                multiline: true,
+                                rows: 4
+                            }
+                        }]
+                    }}
                 />
                 {/* <form className="form flex-column" onSubmit={this.handleSubmit} style={{ flex: 1}}> */}
-                    {/* <TextField 
+                {/* <TextField 
                         
                         id = "name"
                         type = "text"
@@ -82,7 +82,7 @@ class ContactForm extends Component {
                         style={{ flex: '0 0 15%'}}
                         onChange = { (e) => this.setState({name:e.target.value})}
                     /> */}
-                    {/* <TextField 
+                {/* <TextField 
                         name = "contact number"
                         label = "Contact Number"
                         id = "contact number"
@@ -98,7 +98,7 @@ class ContactForm extends Component {
                         value = {this.state.message}
                         onChange = { (e) => this.setState({message:e.target.value})}
                     /> */}
-                    {/* <FormControl>
+                {/* <FormControl>
                         <InputLabel>Required</InputLabel>
                         <Select
                             id = "required"

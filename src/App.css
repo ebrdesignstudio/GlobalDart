@@ -29,6 +29,33 @@ html{
   color: #61dafb;
 }
 
+.MuiTypography-h4{
+    margin: 80px 0px !important; 
+    text-align: center !important;
+    font-family: 'fontMedium' !important;
+}
+
+.light-blue-box{
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.form-container{
+  min-width: 450px;
+}
+
+.textField__container{
+  margin: 30px 0px;
+}
+
+.MuiButton-containedPrimary{
+  color: white !important;
+}
+
+.MuiButton-contained{
+  box-shadow: unset;
+}
 
 
 @keyframes App-logo-spin {

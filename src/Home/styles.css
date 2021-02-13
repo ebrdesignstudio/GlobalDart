@@ -188,7 +188,7 @@
 }
 
 .icon {
-    opacity: 80%;
+    opacity: 0.8;
     width: 64px;
     height: 64px;
 }
@@ -241,8 +241,11 @@
     border-color:unset !important;
 }
 .contact_container button {
-    background-color: rgb(200, 16, 46)!important;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 16px !important;
 }
+
 
 .blue-light-bg {
     background-color: #E7E7FE;
@@ -285,6 +288,10 @@
 
 .nav-link {
     font-weight: 300;
+}
+
+.footer-navs {
+    min-width: 400px;
 }
 
 
@@ -344,9 +351,7 @@
         justify-content: space-evenly;
     }
 
-    .footer-navs {
-        min-width: 400px;
-    }
+    
     
 
 }
