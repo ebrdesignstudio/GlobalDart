@@ -545,6 +545,13 @@
     .home-align {
         height: 100%;
     }
+    .simple-nav{
+        color: #c8102e ;
+        font-weight: 400;
+        padding: 0px 20px;
+        font-size: 17px;
+        text-transform: capitalize;
+    }
 }
 
 
