@@ -157,7 +157,7 @@
     margin: 30px 0px;
 }
 .maps {
-    width: 60%;
+    width: 50%;
     min-height: 100%;
     position: relative; 
 }
@@ -259,7 +259,7 @@
 .background-image {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
@@ -279,7 +279,7 @@
     transform: translateY(-200%);
 }
 .logo {
-    width: 100%;
+    width: 20%;
     height: 74px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -287,11 +287,69 @@
 }
 
 .nav-link {
-    font-weight: 300;
+    color: #373b6b;
+    font-weight: 500;
+    padding: 0px 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'fontMedium' !important;
+    letter-spacing: 0.87px;
 }
 
 .footer-navs {
     min-width: 400px;
+}
+
+#gd-nav header {
+    background: #f7f7fbc7 !important;
+    border-bottom: 2px solid #284c8e;
+}
+
+.white-text#gd-nav header {
+    background: transparent !important;
+    border: none !important;
+}
+
+.white-text .nav-link {
+    color: white !important;
+    transition: 0.4s;
+}
+
+.MuiToolbar-gutters{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-info{
+    margin: 30px 0px; 
+    max-width: 66%;
+}
+
+.sub-page-header {
+    font-size: 34px;
+    line-height:42px;
+    letter-spacing:1px;
+    font-weight:200;
+}
+
+.sub-page-header-container{
+    max-width: 800px
+}
+
+.carousel__dot-group{
+    display: none;
+}
+
+.quick-link{
+    text-decoration: none;
+    font-weight: 400;
+    color: #E7E7FE;
+    font-size: 18px; 
+    line-height: 22px;
+    letter-spacing: 0.87; 
+    text-transform: capitalize;
+    padding-left: -13px; 
+    padding: 10px 0px;
 }
 
 
@@ -358,6 +416,7 @@
 
 
 
+
 @media only screen and (max-width: 471px) {
     html,body{
         width: 100%;
@@ -368,6 +427,7 @@
     .flex-fluid {
         display: flex !important;
         flex-direction: column !important;
+        align-items: center;
     }
     .flex-fluid.reverse {
         flex-direction: column-reverse;
@@ -387,9 +447,9 @@
         min-width: 100%;
     }
     .main{
-        max-width: 80%;
+        max-width: 90%;
         margin: auto;
-        padding: 100px 0px;
+        padding: 60px 0px;
     }
     .background-image {
         background-position: center;
@@ -425,9 +485,15 @@
         width: 100%;
     }
     .main-success{
-        max-width: 1100px;
-        margin: auto;
-        padding: 100px 0px;
+        max-width: 90%;
+        padding: 60px 0px 0px 0px;
+    }
+    .slide___3-Nqo{
+        height: 100vh;
+    }
+    .quote-icon-right{
+        margin: 0;
+        margin-left: auto;
     }
     .services-info{
         width: unset;
@@ -439,6 +505,46 @@
     }
     .image-height {
         margin-top:0px;
+    }
+    #gd-nav header {
+        background: none !important;
+        border-bottom: unset;
+    }
+    .header-info{
+        max-width : 100%;
+    }
+    .info{
+        font-weight: 400;
+        margin: 10px 0px;
+        max-width: 100%;
+    }
+
+    .sub-page-header{
+        font-size: 20px !important;
+        line-height: 24px !important;
+        letter-spacing: 0.8px !important;
+    }
+    .sub-page-header-container{
+        max-width: 100%;
+    }
+    .step {
+        max-width: 100%;
+    }
+    .header{
+        font-size: 24px;
+        line-height: 26px;
+        font-weight: bold;
+    }
+    .numbers{
+        width: 18px;
+        height: 18px;
+    }
+    .title{
+        font-size: 22px;
+        line-height: 26.4px;
+    }
+    .home-align {
+        height: 100%;
     }
 }
 

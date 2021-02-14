@@ -31,7 +31,7 @@ const  Admission = () => {
     ]
     return (
         <div className="admissions">
-            <Navs />
+            {/* <Navs /> */}
             <div className="admission-process main flex-wrap">
                 <div className="flex-fluid">
                     <div style = {{ padding:'0px 20px' }}>

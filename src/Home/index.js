@@ -19,372 +19,420 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import home from './../assets/homeimage/home.jpg';
 
 
+const steps = [
+    {
+        header: 'Counselling',
+        info: "Students have various career options to choose specially after under graduation. Global Dart provides you with the right direction when it comes to decision making by giving you detailed information on your options…",
+        card: false,
+        link: false,
+        image: require('../assets/GDillus/1.png'),
+        numberImage: require('./../assets/Numbers/1.png'),
+        styles: { width: '100%', height: '380px', marginTop: '-70px' }
+    },
+    {
+        header: 'University and course selection',
+        info: "Although the ranking mechanism varies and differs as per the ranking institution, it does provide an insight into the quality of the Institution.We at Global Dart make sure that we apply to only recognized and well accredited institutions.We ask the students if they have a specific location choice in the chosen country and try to select universities in the vicinity of the given location.",
+        card: false,
+        link: false,
+        image: require('./../assets/GDillus/2.png'),
+        numberImage: require('./../assets/Numbers/2.png'),
+        styles: { width: '100%', height: '250px', marginTop: '-15px' }
+    },
+    {
+        header: 'Admissions',
+        info: "These are critical. We provide exact deadlines for Spring/Summer/Fall intakes. Some Universities have multiple deadlines i.e. Scholarship/Priority deadline and documents deadline. It’s important to follow the deadlines strictly as students tend to miss out on an entire year because of it.",
+        // card: true,
+        right: true,
+        link: true,
+        image: require('./../assets/GDillus/3.png'),
+        numberImage: require('./../assets/Numbers/3.png'),
+        styles: { width: '100%', height: '235px' },
+        redirect: () => this.props.history.push('/admission')
+    },
+    {
+        header: 'VISA Processing',
+        info: "Post confirmation of an admission, the student has to apply for Study Visa/ Permit to the respective embassies.We assist students in filing the Visa applications as per the country’s procedure. Some of them may have online forms while others have paper based forms",
+        card: false,
+        link: true,
+        image: require('./../assets/GDillus/4.png'),
+        numberImage: require('./../assets/Numbers/4.png'),
+        styles: { width: '100%', height: '170px', marginTop: '13px' },
+        redirect: () => this.props.history.push('/visaprocessing')
 
-const Home = (props) => {
+    },
+    {
+        header: 'Travel Briefing',
+        info: "We assist all students with their travel and relocation for the course to the new country thereby ensuring a worry free transition. Moving to a new country, be it for study or settling, is no trivial task. We understand the stress and pressure that comes along with this. Excitement at times eventually gives way to anxieties as one gets to hear various experiences had in the country.",
+        // card: true,
+        left: true,
+        link: false,
+        image: require('./../assets/GDillus/5.png'),
+        numberImage: require('./../assets/Numbers/5.png'),
+        styles: { width: '100%', height: '270px', marginTop: '-17px' }
+
+    },
+    {
+        header: 'Post VISA Services',
+        info: "We view this as a transitional phase and hence offer a complete and thorough travel and relocation service, leaving no stone unturned to ensure a smooth transition. Our travel and relocation expertise enable you to literally relax while we handle it all. Leo Global will assist all students in getting the best rates for Air Tickets and foreign exchange. We also helps students with the FOREX cards and travel Insurance which are really useful during the initial stages",
+        card: false,
+        link: false,
+        image: require('./../assets/GDillus/6.png'),
+        numberImage: require('./../assets/Numbers/6.png'),
+        styles: { width: '100%', height: '170px', marginTop: '13px' }
+    },
+    {
+        header: 'Pre and Post Travel Assistance',
+        info: "Knowing the right things to carry is essential. Many students carry things which are irrelevant which increases the baggage load. There are certain things which are useful in India that would be completely useless there. The dress code at institutions is very informal so we need to prepare accordingly.",
+        // card: true,
+        right: true,
+        link: false,
+        image: require('./../assets/GDillus/7.png'),
+        numberImage: require('./../assets/Numbers/7.png'),
+        styles: { width: '100%', height: '240px', marginTop: '-5px' }
+
+    },
+    {
+        header: 'Career Assistance',
+        info: "This is something that is mostly overlooked as a practice in other service providers. We at Global Dart however recognize the importance of mentally preparing a candidate with the right expectations so that the transition is as easy as possible.",
+        card: false,
+        link: false,
+        image: require('./../assets/GDillus/8.png'),
+        numberImage: require('./../assets/Numbers/8.png'),
+        styles: { width: '100%', height: '200px', marginTop: '-11px' }
+
+    },
+]
+
+const benifits = [
+    {
+        title: 'Free Counselling',
+        subtitle: 'Counselling on Value of Degree, Quality of education and Costs',
+        icon: require('./../assets/benfitsicons/meeting.png')
+    },
+    {
+        title: 'Admission letter in a week',
+        subtitle: 'Receive Admission letter in just 7 working days',
+        icon: require('./../assets/benfitsicons/document.png')
+
+    },
+    {
+        title: 'Save VISA Charges',
+        subtitle: "Specific breakdown of students VISA charges and their sponsors",
+        icon: require('./../assets/benfitsicons/savings.png')
+
+    },
+    {
+        title: 'Free SIM and Forex cards',
+        subtitle: 'We also help students with the FOREX cards and travel Insurance',
+        icon: require('./../assets/benfitsicons/sim-card.png')
+    },
+    {
+        title: 'Internship Assured',
+        subtitle: 'Internships give the students real time work experience in a foreign country',
+        icon: require('./../assets/benfitsicons/job.png')
+
+    },
+    {
+        title: '24/7 Assistance',
+        subtitle: 'We are available round the clock to support students',
+        icon: require('./../assets/benfitsicons/helpline.png')
+
+    }
+]
+
+const pastEvents = [
+    {
+        date: '20 Jan 2021',
+        eventName: 'Latest trends in tech in 2021',
+        time: '9:30 AM - 3:00 PM',
+        location: 'Bangalore'
+    },
+]
+
+const upcomingEvents = [
+    {
+        date: '25 Feb 2021',
+        webinar: true,
+        eventName: 'Universities Introduction meetup',
+        time: '9:30 AM - 3:00 PM'
+    },
+    {
+        date: '1 Mar 2021',
+        seminar: true,
+        eventName: 'Application and Travel Planning',
+        time: '9:30 AM - 3:00 PM',
+        location: 'Bangalore',
+    },
+    {
+        date: '15 Mar 2021',
+        seminar: true,
+        eventName: 'Course Discussion',
+        time: '9:30 AM - 3:00 PM',
+        location: 'Bangalore',
+    }
+]
+
+const stories = [
+    {
+        quoteImage: require('./../assets/quotes/right-quotes-symbol.png'),
+        storyText: 'It is a long established fact that a reader will be distracted by the readable content of the page when looking at its layout. The point of using lorem ipsum is that it has a more or less distribution of letters, as opposed to using content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use. ',
+        storyAuthor: 'Akshay Shetty',
+        storyDepartment: 'London school of economics'
+    },
+    {
+        quoteImage: require('./../assets/quotes/right-quotes-symbol.png'),
+        storyText: 'It is a long established fact that a reader will be distracted by the readable content of the page when looking at its layout. The point of using lorem ipsum is that it has a more or less distribution of letters, as opposed to using content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use. ',
+        storyAuthor: 'Rohit Sharma',
+        storyDepartment: 'London school of economics'
+    }
+]
+
+const footerNavs = [
+    { label: 'Admissions', link: '/admission' }, { label: 'VISA', link: '/visaprocessing' }, { label: 'Blog', link: '/blog' }, { label: 'FAQ', link: '/faq' }, { label: 'Contact', link: '#contact' }]
 
 
-    const steps = [
-        {
-            header: 'Counselling',
-            info: "Students have various career options to choose specially after under graduation. Global Dart provides you with the right direction when it comes to decision making by giving you detailed information on your options…",
-            card: false,
-            link: false,
-            image: require('../assets/GDillus/1.png'),
-            numberImage: require('./../assets/Numbers/1.png'),
-            styles: { width: '380px', height: '380px', marginTop: '-70px' }
-        },
-        {
-            header: 'University and course selection',
-            info: "Although the ranking mechanism varies and differs as per the ranking institution, it does provide an insight into the quality of the Institution.We at Global Dart make sure that we apply to only recognized and well accredited institutions.We ask the students if they have a specific location choice in the chosen country and try to select universities in the vicinity of the given location.",
-            card: false,
-            link: false,
-            image: require('./../assets/GDillus/2.png'),
-            numberImage: require('./../assets/Numbers/2.png'),
-            styles: { width: '250px', height: '250px', marginLeft: '-50px', marginTop: '-15px' }
-        },
-        {
-            header: 'Admissions',
-            info: "These are critical. We provide exact deadlines for Spring/Summer/Fall intakes. Some Universities have multiple deadlines i.e. Scholarship/Priority deadline and documents deadline. It’s important to follow the deadlines strictly as students tend to miss out on an entire year because of it.",
-            // card: true,
-            right: true,
-            link: true,
-            image: require('./../assets/GDillus/3.png'),
-            numberImage: require('./../assets/Numbers/3.png'),
-            styles: { width: '235px', height: '235px' },
-            redirect: () => props.history.push('/admission')
-        },
-        {
-            header: 'VISA Processing',
-            info: "Post confirmation of an admission, the student has to apply for Study Visa/ Permit to the respective embassies.We assist students in filing the Visa applications as per the country’s procedure. Some of them may have online forms while others have paper based forms",
-            card: false,
-            link: true,
-            image: require('./../assets/GDillus/4.png'),
-            numberImage: require('./../assets/Numbers/4.png'),
-            styles: { width: '170px', height: '170px', marginTop: '13px' },
-            redirect: () => props.history.push('/visaprocessing')
+function StepDetails(props) {
+    return (
+        <div className="step flex-fluid reverse">
+            <div className="steps">
+                <div className="numbers" style={{ backgroundImage: `url(${props.step.numberImage.default})`, padding: '5px 0px' }} alt="image" />
+                <p className="header black">{props.step.header}</p>
+                <p className="info font-14">{props.step.info}</p>
+                {props.step.link && <><IconButton onClick={props.step.redirect} style={{ padding: 0 }}><span className="font-14 red semi-bold">Know More</span><ArrowForwardIcon style={{ color: '#c8102e', fontSize: 30, paddingLeft: 3 }} /></IconButton></>}
+            </div>
+            <div className="illustration" style={{ ...props.step.styles, marginRight: 50 }}><div className="illustrations" style={{ backgroundImage: `url(${props.step.image.default})`, height: '100%', width: '100%' }} alt="image" /></div>
+        </div>
+    )
+}
 
-        },
-        {
-            header: 'Travel Briefing',
-            info: "We assist all students with their travel and relocation for the course to the new country thereby ensuring a worry free transition. Moving to a new country, be it for study or settling, is no trivial task. We understand the stress and pressure that comes along with this. Excitement at times eventually gives way to anxieties as one gets to hear various experiences had in the country.",
-            // card: true,
-            left: true,
-            link: false,
-            image: require('./../assets/GDillus/5.png'),
-            numberImage: require('./../assets/Numbers/5.png'),
-            styles: { width: '270px', height: '270px', marginTop: '-17px' }
+class Home extends React.Component {
 
-        },
-        {
-            header: 'Post VISA Services',
-            info: "We view this as a transitional phase and hence offer a complete and thorough travel and relocation service, leaving no stone unturned to ensure a smooth transition. Our travel and relocation expertise enable you to literally relax while we handle it all. Leo Global will assist all students in getting the best rates for Air Tickets and foreign exchange. We also helps students with the FOREX cards and travel Insurance which are really useful during the initial stages",
-            card: false,
-            link: false,
-            image: require('./../assets/GDillus/6.png'),
-            numberImage: require('./../assets/Numbers/6.png'),
-            styles: { width: '170px', height: '170px', marginTop: '13px' }
-        },
-        {
-            header: 'Pre and Post Travel Assistance',
-            info: "Knowing the right things to carry is essential. Many students carry things which are irrelevant which increases the baggage load. There are certain things which are useful in India that would be completely useless there. The dress code at institutions is very informal so we need to prepare accordingly.",
-            // card: true,
-            right: true,
-            link: false,
-            image: require('./../assets/GDillus/7.png'),
-            numberImage: require('./../assets/Numbers/7.png'),
-            styles: { width: '240px', height: '240px', marginTop: '-5px' }
+    constructor(props) {
+        super(props);
 
-        },
-        {
-            header: 'Career Assistance',
-            info: "This is something that is mostly overlooked as a practice in other service providers. We at Global Dart however recognize the importance of mentally preparing a candidate with the right expectations so that the transition is as easy as possible.",
-            card: false,
-            link: false,
-            image: require('./../assets/GDillus/8.png'),
-            numberImage: require('./../assets/Numbers/8.png'),
-            styles: { width: '200px', height: '200px', marginTop: '-11px' }
+        this.debouncedScrollHandler = _.debounce(this.handleScroll, 10)
 
-        },
-    ]
+        document.addEventListener('scroll', this.debouncedScrollHandler)
+    }
 
-    const benifits = [
-        {
-            title: 'Free Counselling',
-            subtitle: 'Counselling on Value of Degree, Quality of education and Costs',
-            icon: require('./../assets/benfitsicons/meeting.png')
-        },
-        {
-            title: 'Admission letter in a week',
-            subtitle: 'Receive Admission letter in just 7 working days',
-            icon: require('./../assets/benfitsicons/document.png')
+    componentDidMount = () => {
+        const navElement = document.getElementById('gd-nav');
+        navElement.classList.add('white-text');
+    }
 
-        },
-        {
-            title: 'Save VISA Charges',
-            subtitle: "Specific breakdown of students VISA charges and their sponsors",
-            icon: require('./../assets/benfitsicons/savings.png')
 
-        },
-        {
-            title: 'Free SIM and Forex cards',
-            subtitle: 'We also help students with the FOREX cards and travel Insurance',
-            icon: require('./../assets/benfitsicons/sim-card.png')
-        },
-        {
-            title: 'Internship Assured',
-            subtitle: 'Internships give the students real time work experience in a foreign country',
-            icon: require('./../assets/benfitsicons/job.png')
-
-        },
-        {
-            title: '24/7 Assistance',
-            subtitle: 'We are available round the clock to support students',
-            icon: require('./../assets/benfitsicons/helpline.png')
-
+    handleScroll = (e) => {
+        const navElement = document.getElementById('gd-nav');
+        if (window.scrollY > document.getElementById('landing').offsetHeight) {
+            navElement.classList.remove('white-text');
+        } else {
+            navElement.classList.add('white-text');
         }
-    ]
+    }
 
-    const pastEvents = [
-        {
-            date: '20 Jan 2021',
-            eventName: 'Latest trends in tech in 2021',
-            time: '9:30 AM - 3:00 PM',
-            location: 'Bangalore'
-        },
-    ]
+    componentWillUnmount = () => {
+        document.removeEventListener('scroll', this.debouncedScrollHandler)
+    }
 
-    const upcomingEvents = [
-        {
-            date: '25 Feb 2021',
-            webinar: true,
-            eventName: 'Universities Introduction meetup',
-            time: '9:30 AM - 3:00 PM'
-        },
-        {
-            date: '1 Mar 2021',
-            seminar: true,
-            eventName: 'Application and Travel Planning',
-            time: '9:30 AM - 3:00 PM',
-            location: 'Bangalore',
-        },
-        {
-            date: '15 Mar 2021',
-            seminar: true,
-            eventName: 'Course Discussion',
-            time: '9:30 AM - 3:00 PM',
-            location: 'Bangalore',
-        }
-    ]
+    render() {
 
-    const stories = [
-        {
-            quoteImage: require('./../assets/quotes/right-quotes-symbol.png'),
-            storyText: 'It is a long established fact that a reader will be distracted by the readable content of the page when looking at its layout. The point of using lorem ipsum is that it has a more or less distribution of letters, as opposed to using content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use. ',
-            storyAuthor: 'Akshay Shetty',
-            storyDepartment: 'London school of economics'
-        },
-        {
-            quoteImage: require('./../assets/quotes/right-quotes-symbol.png'),
-            storyText: 'It is a long established fact that a reader will be distracted by the readable content of the page when looking at its layout. The point of using lorem ipsum is that it has a more or less distribution of letters, as opposed to using content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use. ',
-            storyAuthor: 'Rohit Sharma',
-            storyDepartment: 'London school of economics'
-        }
-    ]
-
-    const footerNavs = [
-        { label: 'Blog', link: '/blog' }, { label: 'FAQ', link: '/faq' }, { label: 'Contact', link: '#contact' }]
-
-
-    function StepDetails(props) {
         return (
-            <div className="step flex-fluid reverse">
-                <div className="steps">
-                    <div className="numbers" style={{ backgroundImage: `url(${props.step.numberImage.default})`, padding: '5px 0px' }} alt="image" />
-                    <p className="header black">{props.step.header}</p>
-                    <p className="info font-14">{props.step.info}</p>
-                    {props.step.link && <><IconButton onClick={props.step.redirect} style={{ padding: 0 }}><span className="font-14 red semi-bold">Know More</span><ArrowForwardIcon style={{ color: '#c8102e', fontSize: 30, paddingLeft: 3 }} /></IconButton></>}
+            <div>
+                <div className="page_1" id="landing">
+                    <div className="home-align main flex-fluid">
+                        <div style={{ backgroundColor: 'fafafa' }}>
+                            <div className="background-image" style={{ backgroundImage: `url(${home})` }} alt="home"></div>
+                            <div className="image-height">
+                                <p><span style={{ fontFamily: 'Helvetica' }} className="font-34 text-white">Aiming</span><p><span style={{ fontFamily: 'helvetica-light' }} className="description font-88 text-white">Global <span style={{ fontFamily: 'Helvetica-Bold' }} className="font-88 text-white">Education</span></span></p></p>
+                                <p className="font-16 text-white header-info">Higher education has never been this easier. In this ever challenging world, education at the Global level is the key for a successful career. GlobalDart guides the aspiring students around the globe to access the latest courses from top institutions in the world. GlobalDart handles ways and means for you to aim for a better career and life.</p>
+                                <Button style={{ color: '#ffff', fontSize: '16px', width: '250px', height: '44px', backgroundColor: '#c8102e', textTransform: 'initial', boxShadow: 'unset', fontWeight: 400 }} variant="contained">Know how</Button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="illustration" style={{ height: '310px', width: '100%' }}><div className="illustrations" style={{ backgroundImage: `url(${props.step.image.default})`, ...props.step.styles }} alt="image" /></div>
+                <section id="admissions">
+                    <div className="blue-light-bg">
+                        <div className="page_2 main" style={{ padding: '70px 0px' }}>
+                            <div className="padding-b-50 sub-page-header-container">
+                                <p className=" sub-page-header" >Forget about the tedious process for joining top institutions in the world, we've got your back!  <p style={{ padding: '10px 0px' }} className="semi-bold padding">GlobalDart takes you through a quick 8-step framework to join your desired institution. <br />Let's see How</p></p>
+                            </div>
+                            {
+                                _.map(steps, step => <div className="card-row">
+                                    {
+                                        step.card ?
+                                            <Card
+                                                className="card-align"
+                                                style={{ maxWidth: '1000px', padding: '25px', borderTopLeftRadius: '20px', borderBottomLeftRadius: '20px', bottom: '20px', marginTop: '30px', marginBottom: '30px' }}
+                                            >
+                                                <StepDetails step={step} />
+                                            </Card> :
+                                            <StepDetails
+                                                className="card-align-right"
+                                                step={step}
+                                            />
+                                    }
+                                </div>
+                                )
+                            }
+                        </div>
+                    </div>
+                </section>
+                <div className="blue-gradient">
+                    <div className="main flex-column">
+                        <p className="page-title padding-b-30 left text-white bold font-44">Benefits</p>
+                        <div className="grid-container">
+                            {
+                                _.map(benifits, benifit => <div className="benefit">
+                                    <img className="icon" src={benifit.icon.default} />
+                                    <p className="title">{benifit.title}</p>
+                                    <p className="infos font-14" style={{ color: '#cccccc' }}>{benifit.subtitle}</p>
+                                </div>
+                                )
+                            }
+                        </div>
+                    </div>
+                </div>
+                {/* <div style= {{ backgroundColor: '#fafafa' }} className="universities flex center">
+                <p className="font-40">Our Universities</p>
+            </div> */}
+                <section id="events">
+                    <div className="events">
+                        <div className="main flex-column">
+                            <div style={{ alignItems: 'center', justifyContent: 'space-around' }} className="flex-fluid">
+                                <p className="page-header"> <span className="bold"> Events </span> for Students</p>
+                                <p style={{ maxWidth: '500px' }} className="font-12 space-btwn gray-text">Our university partners visit our offices in India regularly. They do so to speak and meet with students like you in person.Three times a year we plan events in colleges and campuses near our offices.We give presentations and we have an information booth for you to ask us questions in an informal setting</p>
+                            </div>
+                            <div className="flex-fluid space-even margin-top-40">
+                                <div>
+                                    <p className="main-blue margin-b-20 flex font-14">UPCOMING EVENTS</p>
+                                    {
+                                        _.map(upcomingEvents, event =>
+                                            <div className="margin-t-r-b-l ">
+                                                <p className="main-blue font-12">{event.date}</p>
+                                                <p className="main-blue left line-height font-20 semi-bold">{event.eventName}</p>
+                                                <p className="gray-text left  font-12">{event.location}</p>
+
+                                                <p className="gray-text left line-height font-12">{event.time}</p>
+                                                {
+                                                    event.webinar && <Button className="font-12" style={{ display: 'flex', justifyContent: 'left', padding: '5px 0px', fontSize: '12px', color: '#c8102e' }} className="red left"><ExitToAppIcon className="red icon-padding" />Join Meeting</Button>
+                                                }
+                                                {
+                                                    event.seminar && <Button style={{ color: '#c8102e', padding: '10px 0px' }} className="left font-12">REGISTER</Button>
+                                                }
+                                            </div>
+                                        )
+                                    }
+                                </div>
+                                <div style={{ lineHeight: '30.6px' }}>
+                                    <p className="main-blue margin-b-20 font-14 line-height flex semi-bold">PAST EVENTS</p>
+
+                                    {
+                                        _.map(pastEvents, event =>
+                                            <div>
+                                                <p className="main-blue left font-12">{event.date}</p>
+                                                <p className="main-blue left line-height font-20 semi-bold">{event.eventName}</p>
+                                                <p className="gray-text left line-height font-12">{event.time}</p>
+                                                <p className="gray-text left line-height font-12">{event.location}</p>
+                                            </div>
+                                        )
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div className="stories light-red">
+                    <div className="main-success flex-column">
+                        <p className="page-header red"><span className="bold">Success</span> Stories</p>
+                        <div className="carousel-container">
+                            <CarouselProvider infinite isPlaying naturalSlideWidth={1} naturalSlideHeight={0.5} totalSlides={stories.length}>
+                                <Slider>
+                                    {
+                                        _.map(stories, (story, index) =>
+                                            <Slide index={index}>
+                                                <div className="flex" style={{ justifyContent: 'center', flexDirection: 'column', margin: '0px auto' }}>
+                                                    <img className="quote-icon-left" src={story.quoteImage.default} />
+                                                    <p className="flex black-text" style={{ lineHeight: '27.6px', fontFamily: 'fontCabinItalic', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left' }}>{story.storyText}</p>
+                                                    <img className="quote-icon-right" src={story.quoteImage.default} />
+                                                    <div style={{ maxWidth: '200px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', margin: '60px 0px 10px auto' }}>
+                                                        <p style={{ lineHeight: '27.0px' }} className="red font-20">{story.storyAuthor}</p>
+                                                        <p className="black-text" style={{ lineHeight: '17.0px' }} className="font-12">{story.storyDepartment}</p>
+                                                    </div>
+                                                </div>
+                                            </Slide>
+                                        )
+                                    }
+                                </Slider>
+                                <DotGroup />
+
+                            </CarouselProvider>
+                        </div>
+                    </div>
+                </div>
+                <section id="contact">
+                    <div className="flex-fluid contact_container" style={{ minHeight: '720px' }}>
+                        <Location />
+                        <ContactForm />
+                    </div>
+                </section>
+                <div className="blue-background">
+                    <div className="main flex-fluid space-btwn">
+                        <div className="mobile-footer">
+                            <p className="semi-bold text-white footer-font-28">Global Dart Overseas</p>
+                            <p style={{ display: 'flex', flexDirection: 'column' }} className="padding-t-b-5 text-white font-12">Insta office, 1st Floor, SPD Plaza, <span>Koramangala 5th block, Bangalore - 560034</span></p>
+                            <p className="padding-t-b-5 text-white bold flex-vc"><PhoneIcon /><span className="font-16 padding-l-r-10">+91 9597468489</span></p>
+                            <p className="padding-t-b-5 text-white bold flex-vc"><MailIcon /><span className="font-16 padding-l-r-10 ">globaldartoverseas@gmail.com</span></p>
+                        </div>
+                        <div className="flex-column footer-navs">
+                            <div className="quick-links flex-fluid space-btwn">
+                                {
+                                    _.map(footerNavs, footerNavItems =>
+                                        // <Button style={{  }} onClick={() => props.history.push(footerNavItems.link)}>{footerNavItems.label}</Button>
+                                        <a
+                                            className="quick-link"
+                                            href={footerNavItems.link}
+                                        >
+                                            {footerNavItems.label}
+                                        </a>
+                                    )
+                                }
+                                {
+
+                                }
+                            </div>
+                            <div className="icons-center social-links">
+                                <p className="white font-16 padding-t-b-10 semi-bold">Follow us</p>
+                                <div>
+                                    <a
+                                        target="_blank"
+                                        href={'https://www.facebook.com/globaldartoverseas'}
+                                    >
+                                        <FacebookIcon className="white" style={{ marginRight: '20px' }} />
+                                    </a>
+                                    <a
+                                        target="_blank"
+                                        href={'https://www.instagram.com/globaldartoverseas'}
+                                    >
+                                        <InstagramIcon className="white" style={{ marginRight: '20px' }} />
+
+                                    </a>
+                                    <a
+                                        target="_blank"
+                                        href={'https://www.linkedin.com/globaldartoverseas'}
+                                    >
+                                        <LinkedInIcon className="white" style={{ marginRight: '20px' }} />
+                                    </a>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
-    return (
-        <div>
-            <div className="page_1">
-                <div className="home-align main flex-fluid">
-                    <div style={{ backgroundColor: 'fafafa' }}>
-                        <div className="background-image" style={{ backgroundImage: `url(${home})` }} alt="home"></div>
-                        <div className="image-height">
-                            <p><span style={{ fontFamily: 'Helvetica' }} className="font-34 text-white">Aiming</span><p><span style={{ fontFamily: 'helvetica-light' }} className="description font-88 text-white">Global <span style={{ fontFamily: 'Helvetica-Bold' }} className="font-88 text-white">Education</span></span></p></p>
-                            <p style={{ margin: '30px 0px', maxWidth: '66%' }} className="font-16 text-white">Higher education has never been this easier. In this ever challenging world, education at the Global level is the key for a successful career. GlobalDart guides the aspiring students around the globe to access the latest courses from top institutions in the world. GlobalDart handles ways and means for you to aim for a better career and life.</p>
-                            <Button style={{ color: '#ffff', fontSize: '16px', width: '250px', height: '44px', backgroundColor: '#c8102e', textTransform: 'initial', boxShadow: 'unset', fontWeight: 400 }} variant="contained">Know how</Button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section id="admissions">
-                <div className="blue-light-bg">
-                    <div className="page_2 main" style={{ padding: '70px 0px' }}>
-                        <div style={{ maxWidth: '800px' }}>
-                            <p className="padding-b-50 sub-page-header" >Forget about the tedious process for joining top institutions in the world, we've got your back!  <p style={{ padding: '10px 0px' }} className="semi-bold padding">GlobalDart takes you through a quick 8-step framework to join your desired institution. <br />Let's see How</p></p>
-                        </div>
-                        {
-                            _.map(steps, step => <div className="card-row">
-                                {
-                                    step.card ?
-                                        <Card
-                                            className="card-align"
-                                            style={{ maxWidth: '1000px', padding: '25px', borderTopLeftRadius: '20px', borderBottomLeftRadius: '20px', bottom: '20px', marginTop: '30px', marginBottom: '30px' }}
-                                        >
-                                            <StepDetails step={step} />
-                                        </Card> :
-                                        <StepDetails
-                                            className="card-align-right"
-                                            step={step}
-                                        />
-                                }
-                            </div>
-                            )
-                        }
-                    </div>
-                </div>
-            </section>
-            <div className="blue-gradient">
-                <div className="main flex-column">
-                    <p className="page-title padding-b-30 left text-white bold font-44">Benefits</p>
-                    <div className="grid-container">
-                        {
-                            _.map(benifits, benifit => <div className="benefit">
-                                <img className="icon" src={benifit.icon.default} />
-                                <p className="title">{benifit.title}</p>
-                                <p className="infos font-14" style={{ color: '#cccccc' }}>{benifit.subtitle}</p>
-                            </div>
-                            )
-                        }
-                    </div>
-                </div>
-            </div>
-            {/* <div style= {{ backgroundColor: '#fafafa' }} className="universities flex center">
-                <p className="font-40">Our Universities</p>
-            </div> */}
-            <section id="events">
-                <div className="events">
-                    <div className="main flex-column">
-                        <div style={{ alignItems: 'center', justifyContent: 'space-around' }} className="flex-fluid">
-                            <p className="page-header"> <span className="bold"> Events </span> for Students</p>
-                            <p style={{ maxWidth: '500px' }} className="font-12 space-btwn gray-text">Our university partners visit our offices in India regularly. They do so to speak and meet with students like you in person.Three times a year we plan events in colleges and campuses near our offices.We give presentations and we have an information booth for you to ask us questions in an informal setting</p>
-                        </div>
-                        <div className="flex-fluid space-even margin-top-40">
-                            <div>
-                                <p className="main-blue margin-b-20 flex font-14">UPCOMING EVENTS</p>
-                                {
-                                    _.map(upcomingEvents, event =>
-                                        <div className="margin-t-r-b-l ">
-                                            <p className="main-blue font-12">{event.date}</p>
-                                            <p className="main-blue left line-height font-20 semi-bold">{event.eventName}</p>
-                                            <p className="gray-text left  font-12">{event.location}</p>
-
-                                            <p className="gray-text left line-height font-12">{event.time}</p>
-                                            {
-                                                event.webinar && <Button className="font-12" style={{ display: 'flex', justifyContent: 'left', padding: '5px 0px', fontSize: '12px', color: '#c8102e' }} className="red left"><ExitToAppIcon className="red icon-padding" />Join Meeting</Button>
-                                            }
-                                            {
-                                                event.seminar && <Button style={{ color: '#c8102e', padding: '10px 0px' }} className="left font-12">REGISTER</Button>
-                                            }
-                                        </div>
-                                    )
-                                }
-                            </div>
-                            <div style={{ lineHeight: '30.6px' }}>
-                                <p className="main-blue margin-b-20 font-14 line-height flex semi-bold">PAST EVENTS</p>
-
-                                {
-                                    _.map(pastEvents, event =>
-                                        <div>
-                                            <p className="main-blue left font-12">{event.date}</p>
-                                            <p className="main-blue left line-height font-20 semi-bold">{event.eventName}</p>
-                                            <p className="gray-text left line-height font-12">{event.time}</p>
-                                            <p className="gray-text left line-height font-12">{event.location}</p>
-                                        </div>
-                                    )
-                                }
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div className="stories light-red">
-                <div className="main-success flex-column">
-                    <p className="page-header red"><span className="bold">Success</span> Stories</p>
-                    <div className="carousel-container">
-                        <CarouselProvider infinite isPlaying naturalSlideWidth={1} naturalSlideHeight={0.5} totalSlides={stories.length}>
-                            <Slider>
-                                {
-                                    _.map(stories, (story, index) =>
-                                        <Slide index={index}>
-                                            <div className="flex" style={{ justifyContent: 'center', flexDirection: 'column', margin: '0px auto' }}>
-                                                <img className="quote-icon-left" src={story.quoteImage.default} />
-                                                <p className="flex black-text" style={{ lineHeight: '27.6px', fontFamily: 'fontCabinItalic', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left' }}>{story.storyText}</p>
-                                                <img className="quote-icon-right" src={story.quoteImage.default} />
-                                                <div style={{ maxWidth: '200px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', margin: '60px 0px 10px auto' }}>
-                                                    <p style={{ lineHeight: '27.0px' }} className="red font-20">{story.storyAuthor}</p>
-                                                    <p className="black-text" style={{ lineHeight: '17.0px' }} className="font-12">{story.storyDepartment}</p>
-                                                </div>
-                                            </div>
-                                        </Slide>
-                                    )
-                                }
-                            </Slider>
-                            <DotGroup />
-
-                        </CarouselProvider>
-                    </div>
-                </div>
-            </div>
-            <section id="contact">
-                <div className="flex-fluid contact_container" style={{ minHeight: '720px' }}>
-                    <Location />
-                    <ContactForm />
-                </div>
-            </section>
-            <div className="blue-background">
-                <div className="main flex-fluid space-btwn">
-                    <div className="mobile-footer">
-                        <p className="semi-bold text-white footer-font-28">Global Dart Overseas</p>
-                        <p style={{ display: 'flex', flexDirection: 'column' }} className="padding-t-b-5 text-white font-12">1st Floor, SPD Plaza, Jyothi Nivas college road,<span>Koramangala 5th block, Bangalore - 560034</span></p>
-                        <p className="padding-t-b-5 text-white bold flex-vc"><PhoneIcon /><span className="font-16 padding-l-r-10">+91 9597468489</span></p>
-                        <p className="padding-t-b-5 text-white bold flex-vc"><MailIcon /><span className="font-16 padding-l-r-10 ">globaldartoverseas@gmail.com</span></p>
-                    </div>
-                    <div className="flex-column footer-navs">
-                        <div className="quick-links flex-fluid space-btwn">
-                            {
-                                _.map(footerNavs, footerNavItems =>
-                                    // <Button style={{  }} onClick={() => props.history.push(footerNavItems.link)}>{footerNavItems.label}</Button>
-                                    <a
-                                        style={{  textDecoration: 'none', fontWeight: '400', color: '#E7E7FE', fontSize: '20px', lineHeight: '26px', letterSpacing: 0.8, textTransform: 'capitalize', marginLeft: '-13px' }}
-                                        href={footerNavItems.link}
-                                    >
-                                        {footerNavItems.label}
-                                    </a>
-                                )
-                            }
-                            {
-
-                            }
-                        </div>
-                        <div className="icons-center social-links">
-                            <p className="white font-16 padding-t-b-10 semi-bold">Follow us</p>
-                            <div>
-                                <FacebookIcon className="white" style={{ marginRight: '20px' }} />
-                                <LinkedInIcon className="white" style={{ marginRight: '20px' }} />
-                                <InstagramIcon className="white" style={{ marginRight: '20px' }} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
 }
 
 export default withRouter(Home);
