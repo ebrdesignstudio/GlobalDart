@@ -182,7 +182,7 @@ const stories = [
     {
         quoteImage: require('./../assets/quotes/right-quotes-symbol.png'),
         storyText: 'It is a long established fact that a reader will be distracted by the readable content of the page when looking at its layout. The point of using lorem ipsum is that it has a more or less distribution of letters, as opposed to using content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use. ',
-        storyAuthor: 'Rohit Sharma',
+        storyAuthor: 'Dinesh Prasad',
         storyDepartment: 'London school of economics'
     }
 ]
@@ -217,7 +217,7 @@ class Home extends React.Component {
 
     componentDidMount = () => {
         const navElement = document.getElementById('gd-nav');
-        navElement.classList.add('white-text');
+        navElement && navElement.classList.add('white-text');
     }
 
 
@@ -243,7 +243,7 @@ class Home extends React.Component {
                         <div style={{ backgroundColor: 'fafafa' }}>
                             <div className="background-image" style={{ backgroundImage: `url(${home})` }} alt="home"></div>
                             <div className="image-height">
-                                <p><span style={{ fontFamily: 'Helvetica' }} className="font-34 text-white">Aiming</span><p><span style={{ fontFamily: 'helvetica-light' }} className="description font-88 text-white">Global <span style={{ fontFamily: 'Helvetica-Bold' }} className="font-88 text-white">Education</span></span></p></p>
+                                <p><span style={{ fontFamily: 'Helvetica' }} className="font-34 text-white">Aiming</span><p><span className="description font-88 text-white">Global</span> <span style={{ fontFamily: 'Helvetica-Bold' }} className="font-88 text-white">Education</span></p></p>
                                 <p className="font-16 text-white header-info">Higher education has never been this easier. In this ever challenging world, education at the Global level is the key for a successful career. GlobalDart guides the aspiring students around the globe to access the latest courses from top institutions in the world. GlobalDart handles ways and means for you to aim for a better career and life.</p>
                                 <Button style={{ color: '#ffff', fontSize: '16px', width: '250px', height: '44px', backgroundColor: '#c8102e', textTransform: 'initial', boxShadow: 'unset', fontWeight: 400 }} variant="contained">Know how</Button>
                             </div>
