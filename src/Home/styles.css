@@ -436,6 +436,9 @@
 
 
 @media all and (min-width:320px) and (max-width: 480px){
+    .logo{
+        width: 50%;
+    }
     .footer-navs{
         min-width: 100%;
     }
@@ -504,7 +507,7 @@
         padding: 20px;
     }
     .image-height {
-        margin-top:0px;
+        margin-top: 60px;
     }
     #gd-nav header {
         background: none !important;
