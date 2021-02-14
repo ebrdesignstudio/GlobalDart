@@ -302,7 +302,7 @@
 
 #gd-nav header {
     background: #f7f7fbc7 !important;
-    border-bottom: 2px solid #284c8e;
+    border-bottom: 1px solid #284c8e;
 }
 
 .white-text#gd-nav header {
@@ -508,10 +508,6 @@
     }
     .image-height {
         margin-top: 60px;
-    }
-    #gd-nav header {
-        background: none !important;
-        border-bottom: unset;
     }
     .header-info{
         max-width : 100%;
