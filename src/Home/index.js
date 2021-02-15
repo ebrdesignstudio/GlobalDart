@@ -47,7 +47,7 @@ const steps = [
         image: require('./../assets/GDillus/3.png'),
         numberImage: require('./../assets/Numbers/3.png'),
         styles: { width: '100%', height: '235px' },
-        redirect: () => this.props.history.push('/admission')
+        redirect: '/admission'
     },
     {
         header: 'VISA Processing',
@@ -57,7 +57,7 @@ const steps = [
         image: require('./../assets/GDillus/4.png'),
         numberImage: require('./../assets/Numbers/4.png'),
         styles: { width: '100%', height: '170px', marginTop: '13px' },
-        redirect: () => this.props.history.push('/visaprocessing')
+        redirect: '/visaprocessing'
 
     },
     {
@@ -198,7 +198,7 @@ function StepDetails(props) {
                 <div className="numbers" style={{ backgroundImage: `url(${props.step.numberImage.default})`, padding: '5px 0px' }} alt="image" />
                 <p className="header black">{props.step.header}</p>
                 <p className="info font-14">{props.step.info}</p>
-                {props.step.link && <><IconButton onClick={props.step.redirect} style={{ padding: 0 }}><span className="font-14 red semi-bold">Know More</span><ArrowForwardIcon style={{ color: '#c8102e', fontSize: 30, paddingLeft: 3 }} /></IconButton></>}
+                {props.step.link && <><IconButton onClick={() => props.history.push(props.step.redirect)} style={{ padding: 0 }}><span className="font-14 red semi-bold">Know More</span><ArrowForwardIcon style={{ color: '#c8102e', fontSize: 30, paddingLeft: 3 }} /></IconButton></>}
             </div>
             <div className="illustration" style={{ ...props.step.styles, marginRight: 50 }}><div className="illustrations" style={{ backgroundImage: `url(${props.step.image.default})`, height: '100%', width: '100%' }} alt="image" /></div>
         </div>
@@ -223,11 +223,14 @@ class Home extends React.Component {
 
     handleScroll = (e) => {
         const navElement = document.getElementById('gd-nav');
-        if (window.scrollY > document.getElementById('landing').offsetHeight) {
-            navElement.classList.remove('white-text');
-        } else {
-            navElement.classList.add('white-text');
-        }
+        const landing = document.getElementById('landing')
+
+        if (landing)
+            if (window.scrollY > landing.offsetHeight) {
+                navElement.classList.remove('white-text');
+            } else {
+                navElement.classList.add('white-text');
+            }
     }
 
     componentWillUnmount = () => {
@@ -245,7 +248,9 @@ class Home extends React.Component {
                             <div className="image-height">
                                 <p><span style={{ fontFamily: 'Helvetica' }} className="font-34 text-white">Aiming</span><p><span className="description font-88 text-white">Global</span> <span style={{ fontFamily: 'Helvetica-Bold' }} className="font-88 text-white">Education</span></p></p>
                                 <p className="font-16 text-white header-info">Higher education has never been this easier. In this ever challenging world, education at the Global level is the key for a successful career. GlobalDart guides the aspiring students around the globe to access the latest courses from top institutions in the world. GlobalDart handles ways and means for you to aim for a better career and life.</p>
-                                <Button style={{ color: '#ffff', fontSize: '16px', width: '250px', height: '44px', backgroundColor: '#c8102e', textTransform: 'initial', boxShadow: 'unset', fontWeight: 400 }} variant="contained">Know how</Button>
+                                <a href="#admissions" style={{ textDecoration: 'none' }}>
+                                    <Button style={{ color: '#ffff', fontSize: '16px', width: '250px', height: '44px', backgroundColor: '#c8102e', textTransform: 'initial', boxShadow: 'unset', fontWeight: 400 }} variant="contained">Know how</Button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -269,6 +274,7 @@ class Home extends React.Component {
                                             <StepDetails
                                                 className="card-align-right"
                                                 step={step}
+                                                {...this.props}
                                             />
                                     }
                                 </div>
@@ -407,24 +413,20 @@ class Home extends React.Component {
                                         target="_blank"
                                         href={'https://www.facebook.com/globaldartoverseas'}
                                     >
-                                        <FacebookIcon className="white" style={{ marginRight: '20px' }} />
+                                        <FacebookIcon className="white" style={{ margin: '0px 10px' }} />
                                     </a>
                                     <a
                                         target="_blank"
                                         href={'https://www.instagram.com/globaldartoverseas'}
                                     >
-                                        <InstagramIcon className="white" style={{ marginRight: '20px' }} />
-
+                                        <InstagramIcon className="white" style={{ margin: '0px 10px' }} />
                                     </a>
                                     <a
                                         target="_blank"
                                         href={'https://www.linkedin.com/globaldartoverseas'}
                                     >
-                                        <LinkedInIcon className="white" style={{ marginRight: '20px' }} />
+                                        <LinkedInIcon className="white" style={{ margin: '0px 10px' }} />
                                     </a>
-
-
-
                                 </div>
                             </div>
                         </div>

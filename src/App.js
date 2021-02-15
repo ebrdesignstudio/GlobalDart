@@ -8,14 +8,13 @@ import Blog from './Blog/blog';
 import Nav from './Web-bricks/Shared/nav/components/nav';
 import Logo from './Home/logo';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <Router>
         <Nav
           id="gd-nav"
             Logo={Logo}
-
                 titles={[
                 {name: 'Admissions',sectionLink:'admissions'},
                 {name: 'Events',sectionLink:'events'},

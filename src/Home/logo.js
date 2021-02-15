@@ -7,6 +7,7 @@ const Logo = (props) => {
         <div
             id={props.id}
             className={classNames("logo", props.className)}
+            onClick={() => { window.location.pathname = '/'}} 
             style={{
                 backgroundImage: `url(${require('../assets/global-dart-logo/logo.png').default})`,
             }}
