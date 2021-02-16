@@ -76,3 +76,10 @@ html{
   }
   
 }
+
+@media all and (min-width:768px) and (max-width:1024px ){
+  .MuiTypography-h4{
+    margin: 0px !important; 
+    padding: 30px 0px;
+  }
+}

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import Card from '@material-ui/core/Card';
 import _ from 'lodash';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
@@ -19,6 +18,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import home from './../assets/homeimage/home.jpg';
 
 
+
 const steps = [
     {
         header: 'Counselling',
@@ -27,7 +27,7 @@ const steps = [
         link: false,
         image: require('../assets/GDillus/1.png'),
         numberImage: require('./../assets/Numbers/1.png'),
-        styles: { width: '100%', height: '380px', marginTop: '-70px' }
+        styles: { width: '100%', marginTop: '-70px' }
     },
     {
         header: 'University and course selection',
@@ -36,7 +36,7 @@ const steps = [
         link: false,
         image: require('./../assets/GDillus/2.png'),
         numberImage: require('./../assets/Numbers/2.png'),
-        styles: { width: '100%', height: '250px', marginTop: '-15px' }
+        styles: { width: '100%', marginTop: '-15px' }    
     },
     {
         header: 'Admissions',
@@ -46,8 +46,8 @@ const steps = [
         link: true,
         image: require('./../assets/GDillus/3.png'),
         numberImage: require('./../assets/Numbers/3.png'),
-        styles: { width: '100%', height: '235px' },
-        redirect: () => this.props.history.push('/admission')
+        styles: { width: '100%' },
+        redirect: '/admission'
     },
     {
         header: 'VISA Processing',
@@ -56,9 +56,8 @@ const steps = [
         link: true,
         image: require('./../assets/GDillus/4.png'),
         numberImage: require('./../assets/Numbers/4.png'),
-        styles: { width: '100%', height: '170px', marginTop: '13px' },
-        redirect: () => this.props.history.push('/visaprocessing')
-
+        styles: { width: '100%', marginTop: '13px' },
+        redirect: '/visaprocessing'
     },
     {
         header: 'Travel Briefing',
@@ -68,17 +67,16 @@ const steps = [
         link: false,
         image: require('./../assets/GDillus/5.png'),
         numberImage: require('./../assets/Numbers/5.png'),
-        styles: { width: '100%', height: '270px', marginTop: '-17px' }
-
+        styles: { width: '100%', marginTop: '-17px' }
     },
     {
         header: 'Post VISA Services',
-        info: "We view this as a transitional phase and hence offer a complete and thorough travel and relocation service, leaving no stone unturned to ensure a smooth transition. Our travel and relocation expertise enable you to literally relax while we handle it all. Leo Global will assist all students in getting the best rates for Air Tickets and foreign exchange. We also helps students with the FOREX cards and travel Insurance which are really useful during the initial stages",
+        info: "We view this as a transitional phase and hence offer a complete and thorough travel and relocation service, leaving no stone unturned to ensure a smooth transition. Our travel and relocation expertise enable you to literally relax while we handle it all. Global Dart will assist all students in getting the best rates for Air Tickets and foreign exchange. We also helps students with the FOREX cards and travel Insurance which are really useful during the initial stages",
         card: false,
         link: false,
         image: require('./../assets/GDillus/6.png'),
         numberImage: require('./../assets/Numbers/6.png'),
-        styles: { width: '100%', height: '170px', marginTop: '13px' }
+        styles: { width: '100%', marginTop: '13px' }
     },
     {
         header: 'Pre and Post Travel Assistance',
@@ -88,8 +86,7 @@ const steps = [
         link: false,
         image: require('./../assets/GDillus/7.png'),
         numberImage: require('./../assets/Numbers/7.png'),
-        styles: { width: '100%', height: '240px', marginTop: '-5px' }
-
+        styles: { width: '100%', marginTop: '-5px' }
     },
     {
         header: 'Career Assistance',
@@ -98,8 +95,7 @@ const steps = [
         link: false,
         image: require('./../assets/GDillus/8.png'),
         numberImage: require('./../assets/Numbers/8.png'),
-        styles: { width: '100%', height: '200px', marginTop: '-11px' }
-
+        styles: { width: '100%',  marginTop: '-11px' }
     },
 ]
 
@@ -119,7 +115,6 @@ const benifits = [
         title: 'Save VISA Charges',
         subtitle: "Specific breakdown of students VISA charges and their sponsors",
         icon: require('./../assets/benfitsicons/savings.png')
-
     },
     {
         title: 'Free SIM and Forex cards',
@@ -130,13 +125,11 @@ const benifits = [
         title: 'Internship Assured',
         subtitle: 'Internships give the students real time work experience in a foreign country',
         icon: require('./../assets/benfitsicons/job.png')
-
     },
     {
         title: '24/7 Assistance',
         subtitle: 'We are available round the clock to support students',
         icon: require('./../assets/benfitsicons/helpline.png')
-
     }
 ]
 
@@ -198,9 +191,9 @@ function StepDetails(props) {
                 <div className="numbers" style={{ backgroundImage: `url(${props.step.numberImage.default})`, padding: '5px 0px' }} alt="image" />
                 <p className="header black">{props.step.header}</p>
                 <p className="info font-14">{props.step.info}</p>
-                {props.step.link && <><IconButton onClick={props.step.redirect} style={{ padding: 0 }}><span className="font-14 red semi-bold">Know More</span><ArrowForwardIcon style={{ color: '#c8102e', fontSize: 30, paddingLeft: 3 }} /></IconButton></>}
+                {props.step.link && <><IconButton onClick={() => props.history.push(props.step.redirect)} style={{ padding: 0 }}><span className="font-14 red semi-bold">Know More</span><ArrowForwardIcon style={{ color: '#c8102e', fontSize: 30, paddingLeft: 3 }} /></IconButton></>}
             </div>
-            <div className="illustration" style={{ ...props.step.styles, marginRight: 50 }}><div className="illustrations" style={{ backgroundImage: `url(${props.step.image.default})`, height: '100%', width: '100%' }} alt="image" /></div>
+            <div className="illustration" style={{ ...props.step.styles, flex: '1 1', marginRight: 50 }}><div className="illustrations" style={{ backgroundImage: `url(${props.step.image.default})`, height: '100%', width: '100%' }} alt="image" /></div>
         </div>
     )
 }
@@ -298,13 +291,13 @@ class Home extends React.Component {
                 <section id="events">
                     <div className="events">
                         <div className="main flex-column">
-                            <div style={{ alignItems: 'center', justifyContent: 'space-around' }} className="flex-fluid">
+                            <div className="align-center-justify-space-around flex-fluid">
                                 <p className="page-header"> <span className="bold"> Events </span> for Students</p>
-                                <p style={{ maxWidth: '500px' }} className="font-12 space-btwn gray-text">Our university partners visit our offices in India regularly. They do so to speak and meet with students like you in person.Three times a year we plan events in colleges and campuses near our offices.We give presentations and we have an information booth for you to ask us questions in an informal setting</p>
+                                <p className="events-maxwidth font-12 space-btwn gray-text">Our university partners visit our offices in India regularly. They do so to speak and meet with students like you in person.Three times a year we plan events in colleges and campuses near our offices.We give presentations and we have an information booth for you to ask us questions in an informal setting</p>
                             </div>
                             <div className="flex-fluid space-even margin-top-40">
                                 <div>
-                                    <p className="main-blue margin-b-20 flex font-14">UPCOMING EVENTS</p>
+                                    <p className="light-black margin-b-20 flex font-14">UPCOMING EVENTS</p>
                                     {
                                         _.map(upcomingEvents, event =>
                                             <div className="margin-t-r-b-l ">
@@ -324,7 +317,7 @@ class Home extends React.Component {
                                     }
                                 </div>
                                 <div style={{ lineHeight: '30.6px' }}>
-                                    <p className="main-blue margin-b-20 font-14 line-height flex semi-bold">PAST EVENTS</p>
+                                    <p className="light-black margin-b-20 font-14 line-height flex semi-bold">PAST EVENTS</p>
 
                                     {
                                         _.map(pastEvents, event =>
@@ -379,12 +372,12 @@ class Home extends React.Component {
                     <div className="main flex-fluid space-btwn">
                         <div className="mobile-footer">
                             <p className="semi-bold text-white footer-font-28">Global Dart Overseas</p>
-                            <p style={{ display: 'flex', flexDirection: 'column' }} className="padding-t-b-5 text-white font-12">Insta office, 1st Floor, SPD Plaza, <span>Koramangala 5th block, Bangalore - 560034</span></p>
+                            <p className="flex-column padding-t-b-5 text-white font-12">Insta office, 1st Floor, SPD Plaza, <span>Koramangala 5th block, Bangalore - 560034</span></p>
                             <p className="padding-t-b-5 text-white bold flex-vc"><PhoneIcon /><span className="font-16 padding-l-r-10">+91 9597468489</span></p>
                             <p className="padding-t-b-5 text-white bold flex-vc"><MailIcon /><span className="font-16 padding-l-r-10 ">globaldartoverseas@gmail.com</span></p>
                         </div>
                         <div className="flex-column footer-navs">
-                            <div className="quick-links flex-fluid space-btwn">
+                            <div className="quick-links flex-vc column space-btwn">
                                 {
                                     _.map(footerNavs, footerNavItems =>
                                         // <Button style={{  }} onClick={() => props.history.push(footerNavItems.link)}>{footerNavItems.label}</Button>
@@ -422,9 +415,6 @@ class Home extends React.Component {
                                     >
                                         <LinkedInIcon className="white" style={{ marginRight: '20px' }} />
                                     </a>
-
-
-
                                 </div>
                             </div>
                         </div>

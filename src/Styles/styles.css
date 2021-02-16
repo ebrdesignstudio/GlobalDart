@@ -133,6 +133,14 @@ p{
 .flex{
     display: flex;
 }
+.column {
+    flex-direction: column;
+}
+
+.align-center-justify-space-around {
+    align-items: center;
+    justify-content: space-around;
+}
 
 .flex-fluid {
     display: flex;
@@ -163,7 +171,9 @@ p{
 }
 
 /* color classes */
-
+.light-black {
+    color: #444343;
+}
 .white{
     color: #E7E7FE;
 }
@@ -328,3 +338,25 @@ p{
         letter-spacing: 0.27px;
     }
 }
+
+@media all and (min-width:768px) and (max-width:1024px) {
+    .flex-fluid {
+        display: flex;
+        flex-direction: row;
+    }
+    .margin-t-r-b-l {
+        margin: 20px 0px 20px 0px;
+    }
+    .page-header {
+        text-align: left;
+        margin: 10px auto;
+    }
+    .align-center-justify-space-around {
+        align-items: unset;
+        justify-content: unset;
+    }
+    .align-center-justify-space-around {
+        display: block;
+    } 
+}
+
