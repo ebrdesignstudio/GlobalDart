@@ -248,7 +248,7 @@ class Home extends React.Component {
                             <div className="image-height">
                                 <p><span style={{ fontFamily: 'Helvetica' }} className="font-34 text-white">Aiming</span><p><span className="description font-88 text-white">Global</span> <span style={{ fontFamily: 'Helvetica-Bold' }} className="font-88 text-white">Education</span></p></p>
                                 <p className="font-16 text-white header-info">Higher education has never been this easier. In this ever challenging world, education at the Global level is the key for a successful career. GlobalDart guides the aspiring students around the globe to access the latest courses from top institutions in the world. GlobalDart handles ways and means for you to aim for a better career and life.</p>
-                                <a href="#admissions" style={{ textDecoration: 'none' }}>
+                                <a className="link" href="#admissions">
                                     <Button style={{ opacity: 0.8, color: '#ffff', fontSize: '16px', width: '250px', height: '44px', backgroundColor: '#c8102e', textTransform: 'initial', boxShadow: 'unset', fontWeight: 600 }} variant="contained">Know how</Button>
                                 </a>
                             </div>

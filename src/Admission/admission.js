@@ -65,7 +65,9 @@ const Admission = () => {
                     </div>
                     <div>
                         <p className="font-34 margin-t-r-b-l">Want to know more about Admission Process?</p>
-                        <Button style={{ color: '#ffff', fontSize: '18px', width: '220px', height: '44px', fontFamily: 'fontSemiBold', backgroundColor: '#c8102e', textTransform: 'capitalize', boxShadow: 'unset', margin: '20px 0px' }} variant="contained">Get in touch</Button>
+                        <a className="link" href="/#contact">
+                            <Button style={{ color: '#ffff', fontSize: '18px', width: '220px', height: '44px', fontFamily: 'fontSemiBold', backgroundColor: '#c8102e', textTransform: 'capitalize', boxShadow: 'unset', margin: '20px 0px' }} variant="contained">Get in touch</Button>
+                        </a>
                     </div>
                 </div>
             </div>
