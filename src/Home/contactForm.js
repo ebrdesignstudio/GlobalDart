@@ -24,7 +24,7 @@ class ContactForm extends Component {
 
     handleSubmit = async (values) => {
         try {
-            await sendMessage(values);
+            await sendMessage({ ...values, to: '+919597468489'});
         }
         catch (e) {
         }

@@ -27,7 +27,7 @@ const steps = [
         link: false,
         image: require('../assets/GDillus/1.png'),
         numberImage: require('./../assets/Numbers/1.png'),
-        styles: { width: '100%', marginTop: '-70px' }
+        styles: { width: '100%', marginTop: '35px' }
     },
     {
         header: 'University and course selection',
@@ -58,6 +58,7 @@ const steps = [
         numberImage: require('./../assets/Numbers/4.png'),
         styles: { width: '100%', marginTop: '13px' },
         redirect: '/visaprocessing'
+
     },
     {
         header: 'Travel Briefing',
@@ -71,7 +72,7 @@ const steps = [
     },
     {
         header: 'Post VISA Services',
-        info: "We view this as a transitional phase and hence offer a complete and thorough travel and relocation service, leaving no stone unturned to ensure a smooth transition. Our travel and relocation expertise enable you to literally relax while we handle it all. Global Dart will assist all students in getting the best rates for Air Tickets and foreign exchange. We also helps students with the FOREX cards and travel Insurance which are really useful during the initial stages",
+        info: "We view this as a transitional phase and hence offer a complete and thorough travel and relocation service, leaving no stone unturned to ensure a smooth transition. Our travel and relocation expertise enable you to literally relax while we handle it all.",
         card: false,
         link: false,
         image: require('./../assets/GDillus/6.png'),
@@ -175,7 +176,7 @@ const stories = [
     {
         quoteImage: require('./../assets/quotes/right-quotes-symbol.png'),
         storyText: 'It is a long established fact that a reader will be distracted by the readable content of the page when looking at its layout. The point of using lorem ipsum is that it has a more or less distribution of letters, as opposed to using content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use. ',
-        storyAuthor: 'Rohit Sharma',
+        storyAuthor: 'Dinesh Prasad',
         storyDepartment: 'London school of economics'
     }
 ]
@@ -190,8 +191,8 @@ function StepDetails(props) {
             <div className="steps">
                 <div className="numbers" style={{ backgroundImage: `url(${props.step.numberImage.default})`, padding: '5px 0px' }} alt="image" />
                 <p className="header black">{props.step.header}</p>
-                <p className="info font-14">{props.step.info}</p>
-                {props.step.link && <><IconButton onClick={() => props.history.push(props.step.redirect)} style={{ padding: 0 }}><span className="font-14 red semi-bold">Know More</span><ArrowForwardIcon style={{ color: '#c8102e', fontSize: 30, paddingLeft: 3 }} /></IconButton></>}
+                <p className="info font-16">{props.step.info}</p>
+                {props.step.link && <><IconButton onClick={() => props.history.push(props.step.redirect)} style={{ padding: 0 }}><span className="font-16 red semi-bold">Know More</span><ArrowForwardIcon style={{ color: '#c8102e', fontSize: 30, paddingLeft: 3 }} /></IconButton></>}
             </div>
             <div className="illustration" style={{ ...props.step.styles, flex: '1 1', marginRight: 50 }}><div className="illustrations" style={{ backgroundImage: `url(${props.step.image.default})`, height: '100%', width: '100%' }} alt="image" /></div>
         </div>
@@ -210,17 +211,20 @@ class Home extends React.Component {
 
     componentDidMount = () => {
         const navElement = document.getElementById('gd-nav');
-        navElement.classList.add('white-text');
+        navElement && navElement.classList.add('white-text');
     }
 
 
     handleScroll = (e) => {
         const navElement = document.getElementById('gd-nav');
-        if (window.scrollY > document.getElementById('landing').offsetHeight) {
-            navElement.classList.remove('white-text');
-        } else {
-            navElement.classList.add('white-text');
-        }
+        const landing = document.getElementById('landing')
+
+        if (landing)
+            if (window.scrollY > landing.offsetHeight) {
+                navElement.classList.remove('white-text');
+            } else {
+                navElement.classList.add('white-text');
+            }
     }
 
     componentWillUnmount = () => {
@@ -236,9 +240,11 @@ class Home extends React.Component {
                         <div style={{ backgroundColor: 'fafafa' }}>
                             <div className="background-image" style={{ backgroundImage: `url(${home})` }} alt="home"></div>
                             <div className="image-height">
-                                <p><span style={{ fontFamily: 'Helvetica' }} className="font-34 text-white">Aiming</span><p><span style={{ fontFamily: 'helvetica-light' }} className="description font-88 text-white">Global <span style={{ fontFamily: 'Helvetica-Bold' }} className="font-88 text-white">Education</span></span></p></p>
+                                <p><span style={{ fontFamily: 'Helvetica' }} className="font-34 text-white">Aiming</span><p><span className="description font-88 text-white">Global</span> <span style={{ fontFamily: 'Helvetica-Bold' }} className="font-88 text-white">Education</span></p></p>
                                 <p className="font-16 text-white header-info">Higher education has never been this easier. In this ever challenging world, education at the Global level is the key for a successful career. GlobalDart guides the aspiring students around the globe to access the latest courses from top institutions in the world. GlobalDart handles ways and means for you to aim for a better career and life.</p>
-                                <Button style={{ color: '#ffff', fontSize: '16px', width: '250px', height: '44px', backgroundColor: '#c8102e', textTransform: 'initial', boxShadow: 'unset', fontWeight: 400 }} variant="contained">Know how</Button>
+                                <a className="link" href="#admissions">
+                                    <Button style={{ opacity: 0.8, color: '#ffff', fontSize: '16px', width: '250px', height: '44px', backgroundColor: '#c8102e', textTransform: 'initial', boxShadow: 'unset', fontWeight: 600 }} variant="contained">Know how</Button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -247,10 +253,10 @@ class Home extends React.Component {
                     <div className="blue-light-bg">
                         <div className="page_2 main" style={{ padding: '70px 0px' }}>
                             <div className="padding-b-50 sub-page-header-container">
-                                <p className=" sub-page-header" >Forget about the tedious process for joining top institutions in the world, we've got your back!  <p style={{ padding: '10px 0px' }} className="semi-bold padding">GlobalDart takes you through a quick 8-step framework to join your desired institution. <br />Let's see How</p></p>
+                                <p className=" sub-page-header" >Forget about the tedious process for joining top institutions in the world, we've got your back!  <p className="semi-bold padding padding-t-b-10">GlobalDart takes you through a quick 8-step framework to join your desired institution </p> <span className="main-blue bold padding-t-b-10">Let's see how</span></p>
                             </div>
                             {
-                                _.map(steps, step => <div className="card-row">
+                                _.map(steps, step => <div className="card-row margin-t-b-20">
                                     {
                                         step.card ?
                                             <Card
@@ -262,6 +268,7 @@ class Home extends React.Component {
                                             <StepDetails
                                                 className="card-align-right"
                                                 step={step}
+                                                {...this.props}
                                             />
                                     }
                                 </div>
@@ -293,7 +300,7 @@ class Home extends React.Component {
                         <div className="main flex-column">
                             <div className="align-center-justify-space-around flex-fluid">
                                 <p className="page-header"> <span className="bold"> Events </span> for Students</p>
-                                <p className="events-maxwidth font-12 space-btwn gray-text">Our university partners visit our offices in India regularly. They do so to speak and meet with students like you in person.Three times a year we plan events in colleges and campuses near our offices.We give presentations and we have an information booth for you to ask us questions in an informal setting</p>
+                                <p style={{ maxWidth: '500px' }} className="font-14 space-btwn gray-text">Our university partners visit our offices in India regularly. They do so to speak and meet with students like you in person.Three times a year we plan events in colleges and campuses near our offices.We give presentations and we have an information booth for you to ask us questions in an informal setting</p>
                             </div>
                             <div className="flex-fluid space-even margin-top-40">
                                 <div>
@@ -382,7 +389,7 @@ class Home extends React.Component {
                                     _.map(footerNavs, footerNavItems =>
                                         // <Button style={{  }} onClick={() => props.history.push(footerNavItems.link)}>{footerNavItems.label}</Button>
                                         <a
-                                            className="quick-link"
+                                            className="quick-link link"
                                             href={footerNavItems.link}
                                         >
                                             {footerNavItems.label}
@@ -400,20 +407,19 @@ class Home extends React.Component {
                                         target="_blank"
                                         href={'https://www.facebook.com/globaldartoverseas'}
                                     >
-                                        <FacebookIcon className="white" style={{ marginRight: '20px' }} />
+                                        <FacebookIcon className="white" style={{ margin: '0px 10px' }} />
                                     </a>
                                     <a
                                         target="_blank"
                                         href={'https://www.instagram.com/globaldartoverseas'}
                                     >
-                                        <InstagramIcon className="white" style={{ marginRight: '20px' }} />
-
+                                        <InstagramIcon className="white" style={{ margin: '0px 10px' }} />
                                     </a>
                                     <a
                                         target="_blank"
                                         href={'https://www.linkedin.com/globaldartoverseas'}
                                     >
-                                        <LinkedInIcon className="white" style={{ marginRight: '20px' }} />
+                                        <LinkedInIcon className="white" style={{ margin: '0px 10px' }} />
                                     </a>
                                 </div>
                             </div>

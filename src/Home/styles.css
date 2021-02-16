@@ -29,9 +29,9 @@
 }
 .description {
     font-weight: lighter;
+    font-family: 'Helvetica-light';
     font-size: 80px;
-    font-family: Helvetica, sans-serif;
-    margin: 0;
+    padding-right: 10px;
 }
 .align {
     font-weight: bold;
@@ -68,8 +68,7 @@
     flex-direction: row;
 }
 .info {
-    color: #6c6c6c;
-    margin: 2px;
+    color: #6c6b71;
     padding: 10px 0px;
     text-align: left;   
 }
@@ -354,8 +353,11 @@
     display: none;
 }
 
-.quick-link{
+.link{
     text-decoration: none;
+}
+
+.quick-link{
     font-weight: 400;
     color: #E7E7FE;
     font-size: 18px; 

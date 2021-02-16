@@ -71,7 +71,7 @@ p{
 }
 .font-34{
     font-size: 34px;
-    line-height:41px;
+    line-height:40px;
     letter-spacing: 0.64px;
 }
 .font-88 {
@@ -80,8 +80,8 @@ p{
 }
 .font-16{
     font-size: 16px;
-    line-height: 22.6px;
-    letter-spacing: 0.27px;  
+    line-height: 21.6px;
+    letter-spacing: 0.47px;  
 }
 .font-30 {
     font-size: 30px;
@@ -204,7 +204,7 @@ p{
     background-color: rgb(1, 33, 105);
 }
 .gray-text {
-    color: #6c6c6c;
+    color: #55556b;
 }
 
 
