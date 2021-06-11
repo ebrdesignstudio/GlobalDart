@@ -225,13 +225,11 @@ const director = [
         name: 'Avinash Kunni',
         description: 'Director / Co-Founder',
         alumini: 'University of East London Alumini',
-        content: 'lorem epsum is simply dummy text'
     },
     {
         name: 'Surya Kiran Kurapati',
         description: 'Director / Co-Founder',
         alumini: 'Kingston University (UK) Alumini',
-        content: 'lorem epsum is simply dummy text'
     }
 ]
 
@@ -407,18 +405,20 @@ class Home extends React.Component {
                     </div>
                 </section>
                 <div style={{ backgroundColor: '#ffffff'}} className="ceo">
-                    <div className="main flex-fluid">
+                    <div className="main">
                             <p style={{ marginTop:'-60px' }} className="page-header bold">Our <span className="main-blue bold">Leadership</span></p>
-                            {
-                                _.map(director,direct => 
-                                    <div className="flex-column director-align">
-                                        <p className="semi-bold left line-height font-20">{direct.name}</p>
-                                        <p className="semi-bold main-blue left line-height font-14">{direct.description}</p>
-                                        <p className="gray-text left line-height font-12">{direct.alumini}</p>
-                                        <p className="gray-text left line-height font-12">{direct.content}</p>
-                                    </div>
-                                )
-                            } 
+                            <div className="flex-fluid">
+                                {
+                                    _.map(director,direct => 
+                                        <div className="flex-column director-align">
+                                            <p className="semi-bold left line-height font-20">{direct.name}</p>
+                                            <p className="semi-bold main-blue left line-height font-14">{direct.description}</p>
+                                            <p className="gray-text left line-height font-12">{direct.alumini}</p>
+                                            <p className="gray-text left line-height font-12">{direct.content}</p>
+                                        </div>
+                                    )
+                                } 
+                            </div>
                     </div>              
                 </div>
                 <div className="stories light-red">
