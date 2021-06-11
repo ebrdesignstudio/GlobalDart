@@ -302,6 +302,12 @@ p{
     opacity: 0.9;
 }
 
+.director-align{
+    width: 400px;
+    height: 200px;
+}
+
+
 
 
 @media all and (min-width:320px) and (max-width: 480px){
@@ -336,6 +342,9 @@ p{
         font-size: 14px;
         line-height: 18.6px;
         letter-spacing: 0.27px;
+    }
+    .director-align {
+        width: unset;
     }
 }
 

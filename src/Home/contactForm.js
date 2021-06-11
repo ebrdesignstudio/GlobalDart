@@ -36,7 +36,7 @@ class ContactForm extends Component {
 
     render() {
         return (
-            <div key={this.state.key} className="contact_form">
+            <div key={this.state.key} className="contact_form" style={{  maxWidth:'85%',margin:'30px auto'}}>
                 <Form
                     title="Send us a message"
                     submitButton={{

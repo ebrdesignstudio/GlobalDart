@@ -177,8 +177,6 @@
     margin: unset;
     padding: 50px;
 }
-
-
 .grid-container {
     display: flex;
     justify-content: space-between;
@@ -189,13 +187,11 @@
 .maps-iframe {
     min-height: unset;
 }
-
 .icon {
     opacity: 0.8;
     width: 64px;
     height: 64px;
 }
-
 .title {
     font-weight: 600;
     font-size: 24px;
@@ -256,8 +252,24 @@
     /* max-width: 85%;
     margin: 30px auto; */
 }
-
-
+.grid-logos {
+    display: flex;
+    flex-wrap: wrap;  
+}
+.align-university {
+    margin: 10px;
+}
+.university-size {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+    vertical-align: middle;
+}
+.universities-align {
+    background-position: center;
+    background-size: contain;
+}
 
 
 .blue-light-bg {
@@ -287,10 +299,6 @@
     margin: 50px auto;
 }
 
-.services-info{
-    width: 50%;
-    transform: translateY(-200%);
-}
 .logo {
     width: 20%;
     height: 74px;
@@ -450,10 +458,6 @@
     .quote-icon-right{
         margin: 0;
         margin-left: auto;
-    }
-    .services-info{
-        width: unset;
-        transform: none;
     }
     .right {
         background-color:#E7E7FE;
