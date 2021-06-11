@@ -6,8 +6,8 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Checkbox } from '@material-ui/core';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Form from '../Web-bricks/Shared/form/components/form';
-import sendMessage from '../Web-bricks/lib/messenger'
+import Form from '../web-bricks/Shared/form/components/form';
+import sendMessage from '../web-bricks/lib/messenger'
 
 
 class ContactForm extends Component {
@@ -24,7 +24,7 @@ class ContactForm extends Component {
 
     handleSubmit = async (values) => {
         try {
-            await sendMessage({ ...values, to: '+919597468489'});
+            await sendMessage({ ...values, to: '9597468489'});
         }
         catch (e) {
         }

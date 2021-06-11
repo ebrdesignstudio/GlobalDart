@@ -1,3 +1,3 @@
-[submodule "src/Web-bricks"]
-	path = src/Web-bricks
-	url = git@github.com:KrishnaSree8/Web-bricks.git
+[submodule "src/web-bricks"]
+	path = src/web-bricks
+	url = https://github.com/ebrdesignstudio/web-bricks.git
