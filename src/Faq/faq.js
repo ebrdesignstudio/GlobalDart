@@ -8,20 +8,36 @@ import _ from 'lodash';
 const  Faq = () => {
     const faqs = [
         {
-            question: 'Who is a manager?',
-            answer: 'A personnel who bridges the gap between you and the tasks that you need to carry out but do not want to!!'
+            question: '1. Will Consultancy provide career advice by looking into our CV.?',
+            answer: 'A. We do provide career advice based on your CV and interest in educational courses.'
         },
         {
-            question: 'How do we operate?',
-            answer: 'Your Lifestyle Manager either do the assigned tasks by themselves or appoint third party experts in the particular fields'
+            question: '2. Does your consultancy charge any fees for the processing of admission.?',
+            answer: 'A. No, For UK the entire admission process is free. For other countries depends on the country you choose.'
         },
         {
-            question: 'How do we charge?',
-            answer: 'Our basic method is through a subscription basis, apart from a separate charge for On-request services.'
+            question: '3. Are there any scholarships for international students.?',
+            answer: 'A. Yes, depends on your profile and academic background there are scholarships opportunities for international students.'
         },
         {
-            question: 'What are various services that are provided?',
-            answer: 'HuEx provides In-house and On-request services such as purchasing groceries, collecting packages/couriers, collecting laundry and dry cleaning, weekly tidy ups, purchasing medication, providing pet-care, house parties and much more.'
+            question: '4. What would be the common fee structure in UK.?',
+            answer: 'A. It depends on the university and the course selection.'
+        },
+        {
+            question: '5. Will your consultancy help in providing the accommodation.?',
+            answer: 'A. Yes, this comes under post visa services, we provide both university and private accommodation.'
+        },
+        {
+            question: '6. What are post-visa services.?',
+            answer: 'A. If Visa is approved, we provide sim cards, travel cards, flight ticket booking assistance, airport pickup.'
+        },
+        {
+            question: '7. Does your company provide internship in UK and Germany.?',
+            answer: 'A. Yes, we do provide internship services, as we do have tie-ups with some companies at UK.'
+        },
+        {
+            question: '8. Is IELTS or any other English language test required.?',
+            answer: 'A. It depends on the university selection some universities need IELTS score.'
         },
         
     ]
@@ -40,7 +56,7 @@ const  Faq = () => {
                                     <p className="font-20 margin-t-b-20" style={{ fontWeight: 300 }}>{faq.question}</p>
                             </AccordionSummary>
                             <AccordionDetails>
-                                <p className="font-14 gray-text">{faq.answer}</p>
+                                <p className="font-16 gray-text">{faq.answer}</p>
                             </AccordionDetails>
                         </Accordion>
                       </section>

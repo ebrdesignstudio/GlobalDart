@@ -181,6 +181,60 @@ const stories = [
     }
 ]
 
+const universities = [
+    {
+       universityImage: require('./../assets/universitieslogos/1.png'),
+    },
+    {
+        universityImage: require('./../assets/universitieslogos/2.png'),
+    },
+    {
+        universityImage: require('./../assets/universitieslogos/3.png'),
+    },
+    {
+        universityImage: require('./../assets/universitieslogos/4.png'),
+    },
+    {
+        universityImage: require('./../assets/universitieslogos/5.png'),
+    },
+    {
+        universityImage: require('./../assets/universitieslogos/6.png'),
+    },
+    {
+        universityImage: require('./../assets/universitieslogos/7.png'),
+    },
+    {
+        universityImage: require('./../assets/universitieslogos/8.png'),
+    },
+    {
+        universityImage: require('./../assets/universitieslogos/9.png'),
+    },
+    {
+        universityImage: require('./../assets/universitieslogos/10.png'),
+    },
+    {
+        universityImage: require('./../assets/universitieslogos/11.png'),
+    },
+    {
+        universityImage: require('./../assets/universitieslogos/12.png'),
+    }
+]
+
+const director = [
+    {
+        name: 'Avinash Kunni',
+        description: 'Director / Co-Founder',
+        alumini: 'University of East London Alumini',
+        content: 'lorem epsum is simply dummy text'
+    },
+    {
+        name: 'Surya Kiran Kurapati',
+        description: 'Director / Co-Founder',
+        alumini: 'Kingston University (UK) Alumini',
+        content: 'lorem epsum is simply dummy text'
+    }
+]
+
 const footerNavs = [
     { label: 'Admissions', link: '/admission' }, { label: 'VISA', link: '/visaprocessing' }, { label: 'Blog', link: '/blog' }, { label: 'FAQ', link: '/faq' }, { label: 'Contact', link: '#contact' }]
 
@@ -283,18 +337,29 @@ class Home extends React.Component {
                         <div className="grid-container">
                             {
                                 _.map(benifits, benifit => <div className="benefit">
-                                    <img className="icon" src={benifit.icon.default} />
-                                    <p className="title">{benifit.title}</p>
-                                    <p className="infos font-14" style={{ color: '#cccccc' }}>{benifit.subtitle}</p>
+                                        <img className="icon" src={benifit.icon.default} />
+                                        <p className="title">{benifit.title}</p>
+                                        <p className="infos font-14" style={{ color: '#cccccc' }}>{benifit.subtitle}</p>
                                 </div>
                                 )
                             }
                         </div>
                     </div>
                 </div>
-                {/* <div style= {{ backgroundColor: '#fafafa' }} className="universities flex center">
-                <p className="font-40">Our Universities</p>
-            </div> */}
+               <div style={{ backgroundColor: '#ffffff'}} className="universities">
+                   <div className="main">
+                        <p className="page-header"><span className="bold">Our Universities</span></p>
+                        <div className="grid-logos">
+                            {
+                                _.map(universities,university =>
+                                <div className="align-university">
+                                    <img className="university-size" src = {university.universityImage.default} alt="universities-logo"/>
+                                </div> 
+                                )
+                            }
+                        </div>
+                   </div>           
+               </div>
                 <section id="events">
                     <div className="events">
                         <div className="main flex-column">
@@ -341,6 +406,21 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
+                <div style={{ backgroundColor: '#ffffff'}} className="ceo">
+                    <div className="main flex-fluid">
+                            <p style={{ marginTop:'-60px' }} className="page-header bold">Our <span className="main-blue bold">Leadership</span></p>
+                            {
+                                _.map(director,direct => 
+                                    <div className="flex-column director-align">
+                                        <p className="semi-bold left line-height font-20">{direct.name}</p>
+                                        <p className="semi-bold main-blue left line-height font-14">{direct.description}</p>
+                                        <p className="gray-text left line-height font-12">{direct.alumini}</p>
+                                        <p className="gray-text left line-height font-12">{direct.content}</p>
+                                    </div>
+                                )
+                            } 
+                    </div>              
+                </div>
                 <div className="stories light-red">
                     <div className="main-success flex-column">
                         <p className="page-header red"><span className="bold">Success</span> Stories</p>
@@ -364,7 +444,6 @@ class Home extends React.Component {
                                     }
                                 </Slider>
                                 <DotGroup />
-
                             </CarouselProvider>
                         </div>
                     </div>
@@ -384,7 +463,7 @@ class Home extends React.Component {
                             <p className="padding-t-b-5 text-white bold flex-vc"><MailIcon /><span className="font-16 padding-l-r-10 ">globaldartoverseas@gmail.com</span></p>
                         </div>
                         <div className="flex-column footer-navs">
-                            <div className="quick-links flex-vc column space-btwn">
+                            <div className="quick-links flex-fluid space-btwn">
                                 {
                                     _.map(footerNavs, footerNavItems =>
                                         // <Button style={{  }} onClick={() => props.history.push(footerNavItems.link)}>{footerNavItems.label}</Button>
@@ -432,6 +511,3 @@ class Home extends React.Component {
 }
 
 export default withRouter(Home);
-
-
-
