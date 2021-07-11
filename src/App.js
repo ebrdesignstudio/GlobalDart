@@ -17,7 +17,7 @@ function App(props) {
             Logo={Logo}
                 titles={[
                 {name: 'Admissions',sectionLink:'admissions'},
-                {name: 'Events',sectionLink:'events'},
+                // {name: 'Events',sectionLink:'events'},
                 {name: 'FAQ',link: '/faq'},
                 {name: 'Blog',link:'/blog'},
                 {name: 'Contact', sectionLink: 'contact'}

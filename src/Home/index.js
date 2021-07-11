@@ -222,7 +222,7 @@ const universities = [
 
 const director = [
     {
-        name: 'Avinash Kunni',
+        name: 'Avinash Nakka',
         description: 'Director / Co-Founder',
         alumini: 'University of East London Alumini',
     },
@@ -358,7 +358,7 @@ class Home extends React.Component {
                         </div>
                    </div>           
                </div>
-                <section id="events">
+                {/* <section id="events">
                     <div className="events">
                         <div className="main flex-column">
                             <div className="align-center-justify-space-around flex-fluid">
@@ -403,15 +403,16 @@ class Home extends React.Component {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 <div style={{ backgroundColor: '#ffffff'}} className="ceo">
                     <div className="main">
-                            <p style={{ marginTop:'-60px' }} className="page-header bold">Our <span className="main-blue bold">Leadership</span></p>
+                            <p className="page-header bold">Our <span className="main-blue bold">Leadership</span></p>
+                            <p className="ceo-words">As a UK alumni, I always wanted to fulfil the student's dream for global education. At Global Dart, we assist the students for a quality research of their Programme and have a comprehensive guide in choosing the foundation Programme and university setting. Our post-joining services are proving to have a great help for students even after graduation. We are here to extend our hands for students support and make their dreams to reality.</p>
                             <div className="flex-fluid">
                                 {
                                     _.map(director,direct => 
                                         <div className="flex-column director-align">
-                                            <p className="semi-bold left line-height font-20">{direct.name}</p>
+                                            <p className="left line-height font-20 bold">{direct.name}</p>
                                             <p className="semi-bold main-blue left line-height font-14">{direct.description}</p>
                                             <p className="gray-text left line-height font-12">{direct.alumini}</p>
                                             <p className="gray-text left line-height font-12">{direct.content}</p>

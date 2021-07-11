@@ -10,7 +10,7 @@ class Navs extends Component {
         this.navItems = [
             {label: 'Home',link:'/'},
             {label: 'Admissions',link:'/admissions'},
-            {label: 'Events',link:'/events'},
+            // {label: 'Events',link:'/events'},
             {label: 'FAQ',link: '/faq'},
             {label: 'Blog',link:'/blog'},
             {label: 'Contact', link: '#contact'}
