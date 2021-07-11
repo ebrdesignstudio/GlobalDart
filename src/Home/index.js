@@ -407,7 +407,7 @@ class Home extends React.Component {
                 <div style={{ backgroundColor: '#ffffff'}} className="ceo">
                     <div className="main">
                             <p className="page-header bold">Our <span className="main-blue bold">Leadership</span></p>
-                            <p className="ceo-words">As a UK alumni, I always wanted to fulfil the student's dream for global education. At Global Dart, we assist the students for a quality research of their Programme and have a comprehensive guide in choosing the foundation Programme and university setting. Our post-joining services are proving to have a great help for students even after graduation. We are here to extend our hands for students support and make their dreams to reality.</p>
+                            <p className="ceo-words">As a UK alumni, we always wanted to fulfil the student's dream for global education. At Global Dart, we assist the students for a quality research of their Programme and have a comprehensive guide in choosing the foundation Programme and university setting. Our post-orientation services are proving to have a great help for students even after graduation. We are here to extend our hands for student's support and make their dream to reality.</p>
                             <div className="flex-fluid">
                                 {
                                     _.map(director,direct => 
