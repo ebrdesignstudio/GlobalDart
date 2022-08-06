@@ -459,9 +459,19 @@ class Home extends React.Component {
                     <div className="main flex-fluid space-btwn">
                         <div className="mobile-footer">
                             <p className="semi-bold text-white footer-font-28">Global Dart Overseas</p>
-                            <p className="flex-column padding-t-b-5 text-white font-12">Insta office, 1st Floor, SPD Plaza, <span>Koramangala 5th block, Bangalore - 560034</span></p>
+                            <p className="flex-column padding-t-b-5 text-white font-14">Startup Huts Unit 3, 334, 27th Main Road, 1st Sector,<span> HSR Layout, Bangalore - 560087</span></p>
                             <p className="padding-t-b-5 text-white bold flex-vc"><PhoneIcon /><span className="font-16 padding-l-r-10">+91 9597468489</span></p>
                             <p className="padding-t-b-5 text-white bold flex-vc"><MailIcon /><span className="font-16 padding-l-r-10 ">globaldartoverseas@gmail.com</span></p>
+                            <div className='padding-t-b-10'>
+                            <p className="text-white padding-t-b-5 font-12 ls-1 bold">WHITEFIELD BRANCH</p>
+                            <p className="flex-column text-white font-12">705, A Block, Mantri Global Heights,<span> Kannamangala Main Road, Bangalore - 560067</span></p>
+                            </div>
+                            <div className='padding-t-b-10'>
+                                <p className="text-white padding-t-b-5 font-12 ls-1 bold">MADANAPALLE BRANCH</p>
+                                <p className="flex-column text-white font-12">15-230, Burma St, Rama Gopal Naidu Colony,<span> Madanapalle, Andhra Pradesh - 517325</span></p>
+                            </div>
+                            
+                            
                         </div>
                         <div className="flex-column footer-navs">
                             <div className="quick-links flex-fluid space-btwn">
