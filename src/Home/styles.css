@@ -282,11 +282,11 @@
   background: linear-gradient(to right, #1e3c72, #2a5298);
 }
 .background-image {
-    width: 100vw;
+    width: 60vw;
     height: 100vh;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 60px;
+    right: 0;
     z-index: -1;
     background-size: cover;
 }
@@ -343,7 +343,7 @@
 
 .header-info{
     margin: 30px 0px; 
-    max-width: 66%;
+    max-width: 450px;
 }
 
 .sub-page-header {
