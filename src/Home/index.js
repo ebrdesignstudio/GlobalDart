@@ -464,6 +464,16 @@ class Home extends React.Component {
                                 <span>17th main, Sector 4, HSR layout, Bangalore - 560034</span></p>
                             <p className="padding-t-b-5 text-white bold flex-vc"><PhoneIcon /><span className="font-16 padding-l-r-10">+91 9597468489</span></p>
                             <p className="padding-t-b-5 text-white bold flex-vc"><MailIcon /><span className="font-16 padding-l-r-10 ">globaldartoverseas@gmail.com</span></p>
+                            <div className='padding-t-b-10'>
+                            <p className="text-white padding-t-b-5 font-12 ls-1 bold">WHITEFIELD BRANCH</p>
+                            <p className="flex-column text-white font-12">705, A Block, Mantri Global Heights,<span> Kannamangala Main Road, Bangalore - 560067</span></p>
+                            </div>
+                            <div className='padding-t-b-10'>
+                                <p className="text-white padding-t-b-5 font-12 ls-1 bold">MADANAPALLE BRANCH</p>
+                                <p className="flex-column text-white font-12">15-230, Burma St, Rama Gopal Naidu Colony,<span> Madanapalle, Andhra Pradesh - 517325</span></p>
+                            </div>
+                            
+                            
                         </div>
                         <div className="flex-column footer-navs">
                             <div className="quick-links flex-fluid space-btwn">

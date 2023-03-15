@@ -13,7 +13,8 @@ class Navs extends Component {
             // {label: 'Events',link:'/events'},
             {label: 'FAQ',link: '/faq'},
             {label: 'Blog',link:'/blog'},
-            {label: 'Contact', link: '#contact'}
+            {label: 'Contact', link: '#contact'},
+            { label: 'Terms', links: '/terms'}
         ]
     }
 

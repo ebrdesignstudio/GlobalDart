@@ -7,6 +7,7 @@ import Faq from './Faq/faq';
 import Blog from './Blog/blog';
 import Nav from './web-bricks/Shared/nav/components/nav';
 import Logo from './Home/logo';
+import Privacy from './privacy';
 
 function App(props) {
   return (
@@ -17,10 +18,10 @@ function App(props) {
             Logo={Logo}
                 titles={[
                 {name: 'Admissions',sectionLink:'admissions'},
-                // {name: 'Events',sectionLink:'events'},
                 {name: 'FAQ',link: '/faq'},
                 {name: 'Blog',link:'/blog'},
-                {name: 'Contact', sectionLink: 'contact'}
+                {name: 'Contact', sectionLink: 'contact'},
+                {name: 'Terms', link: '/terms'},
         ]} />
         <Switch>
           <Route exact path="/">
@@ -35,6 +36,9 @@ function App(props) {
           <Route path = "/faq">
             <Faq />
           </Route>
+          <Route path = "/terms">
+          <Privacy />
+        </Route>
           <Route path = "/blog">
             <Blog />
           </Route>
