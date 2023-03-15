@@ -459,7 +459,9 @@ class Home extends React.Component {
                     <div className="main flex-fluid space-btwn">
                         <div className="mobile-footer">
                             <p className="semi-bold text-white footer-font-28">Global Dart Overseas</p>
-                            <p className="flex-column padding-t-b-5 text-white font-12">Insta office, 1st Floor, SPD Plaza, <span>Koramangala 5th block, Bangalore - 560034</span></p>
+                            <p className="flex-column padding-t-b-5 text-white font-12">
+                                3rd Floor, 112/1, 11th Cross,
+                                <span>17th main, Sector 4, HSR layout, Bangalore - 560034</span></p>
                             <p className="padding-t-b-5 text-white bold flex-vc"><PhoneIcon /><span className="font-16 padding-l-r-10">+91 9597468489</span></p>
                             <p className="padding-t-b-5 text-white bold flex-vc"><MailIcon /><span className="font-16 padding-l-r-10 ">globaldartoverseas@gmail.com</span></p>
                         </div>
